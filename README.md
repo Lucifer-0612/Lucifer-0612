@@ -43,20 +43,6 @@
 </div>
 
 <!-- ╔══════════════════════════════════════════════════════════════╗
-     ║  SECTION 3b : HOGWARTS EXPRESS PROGRESS BAR                ║
-     ╚══════════════════════════════════════════════════════════════╝ -->
-
-<div align="center">
-
-<br/>
-
-<img src="./assets/hogwarts-express.svg" alt="🚂 Hogwarts Express — Coding Journey" width="100%"/>
-
-<br/>
-
-</div>
-
-<!-- ╔══════════════════════════════════════════════════════════════╗
      ║  SECTION 4 : ABOUT ME — THE SORTING HAT'S VERDICT          ║
      ╚══════════════════════════════════════════════════════════════╝ -->
 
@@ -351,16 +337,35 @@ I'm **Ashutosh Kesarwani**, a **Wizard-in-Training** at **IIIT Allahabad**, curr
 
 <div align="center">
 
-## 📊 The Room of Requirement (Activity Graph)
+## 🪪 Magical Accolades (Holopin)
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=lucifer0612&bg_color=0d1117&color=EEBA30&line=740001&point=EEBA30&area_color=740001&area=true&hide_border=true&custom_title=Spellcasting%20Frequency" alt="Activity Graph" width="100%"/>
-
-<br/><br/>
+<br/>
 
 <!-- Holopin Badges -->
 <a href="https://holopin.io/@lucifer0612">
   <img src="https://holopin.me/lucifer0612" alt="An image of @lucifer0612's Holopin badges" width="100%"/>
 </a>
+
+</div>
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/golden-snitch-divider.svg"/>
+    <img src="./assets/golden-snitch-divider-light.svg" alt="✦" width="100%"/>
+  </picture>
+</div>
+
+<!-- ╔══════════════════════════════════════════════════════════════╗
+     ║  SECTION 10a : HOGWARTS EXPRESS PROGRESS BAR               ║
+     ╚══════════════════════════════════════════════════════════════╝ -->
+
+<div align="center">
+
+## 🚂 The Hogwarts Express
+
+<img src="./assets/hogwarts-express.svg" alt="🚂 Hogwarts Express — Coding Journey" width="100%"/>
+
+<br/>
 
 </div>
 
