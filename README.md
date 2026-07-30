@@ -426,8 +426,12 @@ I'm **Ashutosh Kesarwani**, a **Wizard-in-Training** at **IIIT Allahabad**, curr
   <img src="https://img.shields.io/badge/Instagram-Owl_Post-%23E4405F?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram"/>
 </a>
 &nbsp;
-<a href="https://linkedin.com/in/lucifer0612">
+<a href="https://www.linkedin.com/in/ashutosh-kesarwani-b985aa313/">
   <img src="https://img.shields.io/badge/LinkedIn-Daily_Prophet-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+</a>
+&nbsp;
+<a href="https://leetcode.com/u/lucifer-0612/">
+  <img src="https://img.shields.io/badge/LeetCode-Spellbook-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"/>
 </a>
 &nbsp;
 <a href="https://twitter.com/lucifer0612">
