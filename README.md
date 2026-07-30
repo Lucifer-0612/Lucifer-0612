@@ -210,17 +210,7 @@ I'm **Ashutosh Kesarwani**, a **Wizard-in-Training** at **IIIT Allahabad**, curr
 
 <br/>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=lucifer0612&show_icons=true&title_color=EEBA30&icon_color=EEBA30&text_color=E5E7EB&bg_color=0d1117&border_color=740001&ring_color=EEBA30&hide_border=false&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=lucifer0612&show_icons=true&title_color=740001&icon_color=740001&text_color=1A0000&bg_color=FFFFFF&border_color=EEBA30" alt="GitHub Stats"/>
-</picture>
-&nbsp;&nbsp;
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=lucifer0612&layout=compact&title_color=EEBA30&text_color=E5E7EB&bg_color=0d1117&border_color=740001&langs_count=8"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucifer0612&layout=compact&title_color=740001&text_color=1A0000&bg_color=FFFFFF&border_color=EEBA30&langs_count=8" alt="Top Languages"/>
-</picture>
 
-<br/><br/>
 
 <!-- Streak Stats with Gryffindor Colors -->
 <picture>
@@ -228,13 +218,7 @@ I'm **Ashutosh Kesarwani**, a **Wizard-in-Training** at **IIIT Allahabad**, curr
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=lucifer0612&background=FFFFFF&border=EEBA30&stroke=EEBA30&ring=740001&fire=740001&currStreakNum=740001&sideNums=1A0000&currStreakLabel=740001&sideLabels=740001&dates=8b949e" alt="GitHub Streak"/>
 </picture>
 
-<br/><br/>
 
-<!-- Random Dev Quote -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical&bg_color=0d1117&text_color=EEBA30&border_color=740001"/>
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical&bg_color=FFFFFF&text_color=1A0000&border_color=EEBA30" alt="Random Quote"/>
-</picture>
 
 ### 🏆 Gringotts Vault Achievements
 
