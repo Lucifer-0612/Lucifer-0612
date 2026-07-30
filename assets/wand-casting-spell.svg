@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 120" width="800" height="120">
+  <defs>
+    <style>
+      /* ═══ Wand Casting Spell — Tech Stack Intro ═══ */
+
+      /* Wand appears */
+      .wand {
+        opacity: 0;
+        animation: wandAppear 0.8s ease-out 0.2s forwards;
+      }
+      @keyframes wandAppear {
+        0% { opacity: 0; transform: translateX(-20px) rotate(-15deg); }
+        100% { opacity: 1; transform: translateX(0) rotate(0deg); }
+      }
+
+      /* Wand tip flash */
+      .wand-flash {
+        opacity: 0;
+        animation: tipFlash 3s ease-in-out 1s infinite;
+      }
+      @keyframes tipFlash {
+        0%, 100% { opacity: 0; transform: scale(0.5); }
+        5% { opacity: 1; transform: scale(1.5); }
+        10% { opacity: 0.6; transform: scale(1); }
+        15% { opacity: 0; transform: scale(0.5); }
+      }
+
+      /* Spell stream — main beam */
+      .spell-beam {
+        stroke-dasharray: 500;
+        stroke-dashoffset: 500;
+        animation: beamShoot 2s ease-out 0.8s forwards;
+      }
+      @keyframes beamShoot {
+        0% { stroke-dashoffset: 500; opacity: 0; }
+        20% { opacity: 0.8; }
+        100% { stroke-dashoffset: 0; opacity: 0.4; }
+      }
+
+      /* Spell particles — flying outward */
+      .particle { opacity: 0; }
+      .p1 { animation: flyRight 2.5s ease-out 1.2s infinite; }
+      .p2 { animation: flyRight 2.5s ease-out 1.5s infinite; }
+      .p3 { animation: flyRight 2.5s ease-out 1.8s infinite; }
+      .p4 { animation: flyRight 2.5s ease-out 2.1s infinite; }
+      .p5 { animation: flyRight 2.8s ease-out 1.0s infinite; }
+      .p6 { animation: flyRight 2.8s ease-out 1.4s infinite; }
+      .p7 { animation: flyRight 2.8s ease-out 1.7s infinite; }
+      .p8 { animation: flyRight 2.8s ease-out 2.0s infinite; }
+
+      @keyframes flyRight {
+        0% { opacity: 0; transform: translate(0, 0) scale(0.3); }
+        15% { opacity: 1; transform: scale(1); }
+        70% { opacity: 0.6; }
+        100% { opacity: 0; transform: translate(250px, 0) scale(0.1); }
+      }
+
+      /* Sparkle burst at source */
+      .spark { opacity: 0; }
+      .sk1 { animation: sparkBurst 1.5s ease-out 1s infinite; }
+      .sk2 { animation: sparkBurst 1.5s ease-out 1.3s infinite; }
+      .sk3 { animation: sparkBurst 1.5s ease-out 1.6s infinite; }
+      .sk4 { animation: sparkBurst 1.5s ease-out 1.9s infinite; }
+      .sk5 { animation: sparkBurst 1.5s ease-out 2.2s infinite; }
+      .sk6 { animation: sparkBurst 1.5s ease-out 2.5s infinite; }
+
+      @keyframes sparkBurst {
+        0% { opacity: 0; transform: scale(0); }
+        20% { opacity: 1; transform: scale(1.2); }
+        100% { opacity: 0; transform: scale(0) translate(var(--dx, 30px), var(--dy, -20px)); }
+      }
+
+      /* Trailing spell wisps */
+      .wisp {
+        opacity: 0;
+        animation: wispFloat 4s ease-in-out infinite;
+      }
+      .w1 { animation-delay: 0.5s; }
+      .w2 { animation-delay: 1.2s; }
+      .w3 { animation-delay: 2s; }
+      .w4 { animation-delay: 2.8s; }
+
+      @keyframes wispFloat {
+        0%, 100% { opacity: 0; transform: translateY(0); }
+        30% { opacity: 0.3; }
+        50% { opacity: 0.2; transform: translateY(-8px); }
+        70% { opacity: 0.1; }
+      }
+
+      /* Glow aura around spell origin */
+      .spell-glow {
+        animation: glowPulse 2s ease-in-out infinite;
+      }
+      @keyframes glowPulse {
+        0%, 100% { opacity: 0.1; transform: scale(0.9); }
+        50% { opacity: 0.3; transform: scale(1.1); }
+      }
+
+      /* Stars along spell path */
+      .trail-star { opacity: 0; }
+      .ts1 { animation: trailTwinkle 2s ease-in-out 1.5s infinite; }
+      .ts2 { animation: trailTwinkle 2s ease-in-out 2s infinite; }
+      .ts3 { animation: trailTwinkle 2s ease-in-out 2.5s infinite; }
+      .ts4 { animation: trailTwinkle 2s ease-in-out 1.8s infinite; }
+      .ts5 { animation: trailTwinkle 2s ease-in-out 2.3s infinite; }
+
+      @keyframes trailTwinkle {
+        0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+        50% { opacity: 0.8; transform: scale(1) rotate(180deg); }
+      }
+    </style>
+
+    <!-- Spell gradient -->
+    <linearGradient id="spellGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EEBA30" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#FCE074" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#EEBA30" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#740001" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Wand wood gradient -->
+    <linearGradient id="wandWood" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4A3728"/>
+      <stop offset="30%" stop-color="#6B4C3B"/>
+      <stop offset="60%" stop-color="#8B6B4E"/>
+      <stop offset="100%" stop-color="#5C3D2E"/>
+    </linearGradient>
+
+    <!-- Particle glow filter -->
+    <filter id="particleGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Star shape -->
+    <polygon id="starShape" points="0,-6 1.5,-2 6,-2 2.5,1 4,5.5 0,3 -4,5.5 -2.5,1 -6,-2 -1.5,-2" fill="#FCE074"/>
+  </defs>
+
+  <!-- ═══ Spell Glow Aura ═══ -->
+  <circle class="spell-glow" cx="155" cy="60" r="25" fill="#EEBA30" opacity="0.15"/>
+
+  <!-- ═══ The Wand ═══ -->
+  <g class="wand" transform="translate(60, 40)">
+    <!-- Wand body -->
+    <rect x="0" y="16" width="95" height="8" rx="2" fill="url(#wandWood)" transform="rotate(-8, 0, 20)"/>
+    <!-- Wand handle detail -->
+    <rect x="0" y="14" width="25" height="12" rx="3" fill="#3D2B1F" transform="rotate(-8, 0, 20)"/>
+    <!-- Handle grip lines -->
+    <line x1="5" y1="15" x2="5" y2="25" stroke="#2A1A10" stroke-width="0.8" opacity="0.5" transform="rotate(-8, 0, 20)"/>
+    <line x1="10" y1="14.5" x2="10" y2="24.5" stroke="#2A1A10" stroke-width="0.8" opacity="0.5" transform="rotate(-8, 0, 20)"/>
+    <line x1="15" y1="14" x2="15" y2="24" stroke="#2A1A10" stroke-width="0.8" opacity="0.5" transform="rotate(-8, 0, 20)"/>
+    <line x1="20" y1="13.5" x2="20" y2="23.5" stroke="#2A1A10" stroke-width="0.8" opacity="0.5" transform="rotate(-8, 0, 20)"/>
+    <!-- Wand tip -->
+    <polygon points="93,14 105,19 93,24" fill="#5C3D2E" transform="rotate(-8, 0, 20)"/>
+    <!-- Wand tip highlight -->
+    <circle cx="103" cy="17" r="2" fill="#EEBA30" opacity="0.6" transform="rotate(-8, 0, 20)"/>
+  </g>
+
+  <!-- ═══ Wand Tip Flash ═══ -->
+  <circle class="wand-flash" cx="162" cy="55" r="8" fill="#FCE074" opacity="0"/>
+
+  <!-- ═══ Spell Beam ═══ -->
+  <path class="spell-beam" d="M165,58 C250,45 400,55 600,50 Q700,47 780,50" 
+        fill="none" stroke="url(#spellGrad)" stroke-width="3" stroke-linecap="round"/>
+  <!-- Secondary thin beam -->
+  <path class="spell-beam" d="M165,60 C280,70 450,48 620,55 Q720,58 780,55" 
+        fill="none" stroke="url(#spellGrad)" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- ═══ Spell Particles ═══ -->
+  <!-- Upper arc particles -->
+  <circle class="particle p1" cx="200" cy="45" r="3" fill="#EEBA30" filter="url(#particleGlow)"/>
+  <circle class="particle p2" cx="220" cy="38" r="2.5" fill="#FCE074" filter="url(#particleGlow)"/>
+  <circle class="particle p3" cx="190" cy="50" r="2" fill="#EEBA30"/>
+  <circle class="particle p4" cx="210" cy="42" r="3.5" fill="#FCE074" filter="url(#particleGlow)"/>
+  <!-- Lower arc particles -->
+  <circle class="particle p5" cx="200" cy="68" r="2.5" fill="#EEBA30" filter="url(#particleGlow)"/>
+  <circle class="particle p6" cx="215" cy="72" r="2" fill="#FCE074"/>
+  <circle class="particle p7" cx="195" cy="65" r="3" fill="#EEBA30" filter="url(#particleGlow)"/>
+  <circle class="particle p8" cx="225" cy="60" r="2" fill="#FCE074"/>
+
+  <!-- ═══ Sparkles at Origin ═══ -->
+  <circle class="spark sk1" cx="170" cy="50" r="1.5" fill="#FCE074"/>
+  <circle class="spark sk2" cx="175" cy="65" r="1.2" fill="#EEBA30"/>
+  <circle class="spark sk3" cx="160" cy="45" r="1" fill="#FCE074"/>
+  <circle class="spark sk4" cx="168" cy="70" r="1.3" fill="#EEBA30"/>
+  <circle class="spark sk5" cx="178" cy="48" r="1" fill="#FCE074"/>
+  <circle class="spark sk6" cx="155" cy="55" r="1.5" fill="#EEBA30"/>
+
+  <!-- ═══ Trail Stars ═══ -->
+  <use class="trail-star ts1" href="#starShape" x="300" y="48" transform="scale(0.6)"/>
+  <use class="trail-star ts2" href="#starShape" x="420" y="55" transform="scale(0.5)"/>
+  <use class="trail-star ts3" href="#starShape" x="540" y="45" transform="scale(0.7)"/>
+  <use class="trail-star ts4" href="#starShape" x="650" y="52" transform="scale(0.5)"/>
+  <use class="trail-star ts5" href="#starShape" x="730" y="48" transform="scale(0.6)"/>
+
+  <!-- ═══ Spell Wisps ═══ -->
+  <ellipse class="wisp w1" cx="350" cy="55" rx="30" ry="4" fill="#EEBA30" opacity="0"/>
+  <ellipse class="wisp w2" cx="480" cy="50" rx="25" ry="3" fill="#FCE074" opacity="0"/>
+  <ellipse class="wisp w3" cx="600" cy="55" rx="20" ry="3" fill="#EEBA30" opacity="0"/>
+  <ellipse class="wisp w4" cx="710" cy="52" rx="22" ry="3" fill="#FCE074" opacity="0"/>
+</svg>

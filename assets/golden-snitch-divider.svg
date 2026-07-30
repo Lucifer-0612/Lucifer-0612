@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 80" width="800" height="80">
+  <defs>
+    <style>
+      /* ═══ Golden Snitch Divider — Pure CSS Animation ═══ */
+      
+      /* Snitch body bob */
+      .snitch-body {
+        animation: snitchBob 3s ease-in-out infinite;
+      }
+      @keyframes snitchBob {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-4px); }
+      }
+
+      /* Wing flap — left */
+      .wing-left {
+        animation: flapLeft 0.4s ease-in-out infinite alternate;
+        transform-origin: 400px 35px;
+      }
+      @keyframes flapLeft {
+        0% { transform: rotate(0deg) scaleY(1); }
+        100% { transform: rotate(-8deg) scaleY(0.85); }
+      }
+
+      /* Wing flap — right */
+      .wing-right {
+        animation: flapRight 0.4s ease-in-out infinite alternate;
+        transform-origin: 400px 35px;
+      }
+      @keyframes flapRight {
+        0% { transform: rotate(0deg) scaleY(1); }
+        100% { transform: rotate(8deg) scaleY(0.85); }
+      }
+
+      /* Line shimmer — left */
+      .shimmer-left {
+        animation: shimmerLeft 3s ease-in-out infinite;
+      }
+      @keyframes shimmerLeft {
+        0%, 100% { opacity: 0; transform: translateX(60px); }
+        40%, 60% { opacity: 1; }
+        50% { transform: translateX(-10px); }
+      }
+
+      /* Line shimmer — right */
+      .shimmer-right {
+        animation: shimmerRight 3s ease-in-out infinite;
+      }
+      @keyframes shimmerRight {
+        0%, 100% { opacity: 0; transform: translateX(-60px); }
+        40%, 60% { opacity: 1; }
+        50% { transform: translateX(10px); }
+      }
+
+      /* Sparkle twinkle */
+      .sparkle1 { animation: twinkle 2s ease-in-out infinite; }
+      .sparkle2 { animation: twinkle 2s ease-in-out 0.5s infinite; }
+      .sparkle3 { animation: twinkle 2s ease-in-out 1s infinite; }
+      .sparkle4 { animation: twinkle 2s ease-in-out 1.5s infinite; }
+      .sparkle5 { animation: twinkle 1.8s ease-in-out 0.3s infinite; }
+      .sparkle6 { animation: twinkle 1.8s ease-in-out 0.8s infinite; }
+
+      @keyframes twinkle {
+        0%, 100% { opacity: 0; transform: scale(0); }
+        50% { opacity: 1; transform: scale(1); }
+      }
+
+      /* Glow pulse on snitch */
+      .snitch-glow {
+        animation: glowPulse 2s ease-in-out infinite;
+      }
+      @keyframes glowPulse {
+        0%, 100% { opacity: 0.15; }
+        50% { opacity: 0.4; }
+      }
+    </style>
+
+    <!-- Snitch gold gradient -->
+    <radialGradient id="snitchGold" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#FCE074"/>
+      <stop offset="50%" stop-color="#EEBA30"/>
+      <stop offset="100%" stop-color="#C69214"/>
+    </radialGradient>
+
+    <!-- Wing gradient -->
+    <linearGradient id="wingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5E7EB" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#9CA3AF" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <!-- Line gradient — left -->
+    <linearGradient id="lineGradLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#740001" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#740001" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#EEBA30" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- Line gradient — right -->
+    <linearGradient id="lineGradRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EEBA30" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#740001" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#740001" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Shimmer gradient -->
+    <linearGradient id="shimmerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EEBA30" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FCE074" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#EEBA30" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="snitchGlowFilter" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- ═══ Decorative Lines ═══ -->
+  <!-- Left line -->
+  <line x1="40" y1="40" x2="365" y2="40" stroke="url(#lineGradLeft)" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Right line -->
+  <line x1="435" y1="40" x2="760" y2="40" stroke="url(#lineGradRight)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Shimmer effect — left -->
+  <rect class="shimmer-left" x="100" y="38" width="80" height="4" rx="2" fill="url(#shimmerGrad)" opacity="0"/>
+  <!-- Shimmer effect — right -->
+  <rect class="shimmer-right" x="620" y="38" width="80" height="4" rx="2" fill="url(#shimmerGrad)" opacity="0"/>
+
+  <!-- ═══ Sparkles ═══ -->
+  <circle class="sparkle1" cx="340" cy="30" r="1.5" fill="#FCE074"/>
+  <circle class="sparkle2" cx="460" cy="50" r="1.5" fill="#FCE074"/>
+  <circle class="sparkle3" cx="355" cy="55" r="1" fill="#EEBA30"/>
+  <circle class="sparkle4" cx="445" cy="25" r="1" fill="#EEBA30"/>
+  <circle class="sparkle5" cx="370" cy="20" r="1.2" fill="#FCE074"/>
+  <circle class="sparkle6" cx="430" cy="60" r="1.2" fill="#FCE074"/>
+
+  <!-- ═══ The Golden Snitch ═══ -->
+  <g class="snitch-body">
+    <!-- Glow aura -->
+    <circle class="snitch-glow" cx="400" cy="40" r="18" fill="#EEBA30" opacity="0.2"/>
+
+    <!-- Left Wing -->
+    <g class="wing-left">
+      <path d="M390,35 Q375,15 355,12 Q345,11 340,15 Q338,18 342,20 Q355,22 370,30 Q380,34 388,36" 
+            fill="url(#wingGrad)" stroke="#9CA3AF" stroke-width="0.5" opacity="0.85"/>
+      <!-- Wing veins -->
+      <path d="M387,34 Q375,22 358,16" fill="none" stroke="#9CA3AF" stroke-width="0.3" opacity="0.5"/>
+      <path d="M385,33 Q372,25 355,20" fill="none" stroke="#9CA3AF" stroke-width="0.3" opacity="0.4"/>
+    </g>
+
+    <!-- Right Wing -->
+    <g class="wing-right">
+      <path d="M410,35 Q425,15 445,12 Q455,11 460,15 Q462,18 458,20 Q445,22 430,30 Q420,34 412,36" 
+            fill="url(#wingGrad)" stroke="#9CA3AF" stroke-width="0.5" opacity="0.85"/>
+      <!-- Wing veins -->
+      <path d="M413,34 Q425,22 442,16" fill="none" stroke="#9CA3AF" stroke-width="0.3" opacity="0.5"/>
+      <path d="M415,33 Q428,25 445,20" fill="none" stroke="#9CA3AF" stroke-width="0.3" opacity="0.4"/>
+    </g>
+
+    <!-- Snitch sphere -->
+    <circle cx="400" cy="40" r="10" fill="url(#snitchGold)" stroke="#C69214" stroke-width="0.8"/>
+
+    <!-- Snitch equator line -->
+    <ellipse cx="400" cy="40" rx="10" ry="2.5" fill="none" stroke="#C69214" stroke-width="0.6" opacity="0.7"/>
+
+    <!-- Snitch highlight -->
+    <ellipse cx="396" cy="36" rx="3" ry="2" fill="#FCE074" opacity="0.6"/>
+  </g>
+</svg>

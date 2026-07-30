@@ -1,0 +1,227 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="900" height="280">
+  <defs>
+    <style>
+      /* ═══ Marauder's Map Header — Light Mode ═══ */
+      .parchment-bg { fill: url(#parchmentGrad); }
+
+      .draw-title {
+        stroke-dasharray: 1200;
+        stroke-dashoffset: 1200;
+        animation: drawIn 4s ease-in-out 0.5s forwards;
+        fill: none;
+        stroke: #740001;
+        stroke-width: 1.5;
+      }
+      .draw-title-fill {
+        opacity: 0;
+        animation: fadeInSlow 1.5s ease-in 3.5s forwards;
+      }
+      .draw-subtitle {
+        stroke-dasharray: 800;
+        stroke-dashoffset: 800;
+        animation: drawInSub 3s ease-in-out 3s forwards;
+        fill: none;
+        stroke: #8B6914;
+        stroke-width: 0.8;
+      }
+      .draw-subtitle-fill {
+        opacity: 0;
+        animation: fadeInSlow 1.5s ease-in 5s forwards;
+      }
+
+      @keyframes drawIn {
+        0% { stroke-dashoffset: 1200; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes drawInSub {
+        0% { stroke-dashoffset: 800; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes fadeInSlow {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
+      .footstep { opacity: 0; }
+      .fs1 { animation: stepAppear 1.2s ease-in-out 1s forwards; }
+      .fs2 { animation: stepAppear 1.2s ease-in-out 1.6s forwards; }
+      .fs3 { animation: stepAppear 1.2s ease-in-out 2.2s forwards; }
+      .fs4 { animation: stepAppear 1.2s ease-in-out 2.8s forwards; }
+      .fs5 { animation: stepAppear 1.2s ease-in-out 3.4s forwards; }
+      .fs6 { animation: stepAppear 1.2s ease-in-out 4s forwards; }
+      .fs7 { animation: stepAppear 1.2s ease-in-out 4.6s forwards; }
+      .fs8 { animation: stepAppear 1.2s ease-in-out 5.2s forwards; }
+
+      @keyframes stepAppear {
+        0% { opacity: 0; transform: scale(0.5); }
+        30% { opacity: 0.4; transform: scale(1); }
+        70% { opacity: 0.4; }
+        100% { opacity: 0; transform: scale(1); }
+      }
+
+      .corner-deco { opacity: 0; animation: fadeInSlow 2s ease-in 0.2s forwards; }
+
+      .border-line {
+        stroke-dasharray: 400;
+        stroke-dashoffset: 400;
+        animation: drawBorder 2s ease-in-out 0s forwards;
+      }
+      .border-line-h {
+        stroke-dasharray: 900;
+        stroke-dashoffset: 900;
+        animation: drawBorderH 2s ease-in-out 0s forwards;
+      }
+      @keyframes drawBorder { 0% { stroke-dashoffset: 400; } 100% { stroke-dashoffset: 0; } }
+      @keyframes drawBorderH { 0% { stroke-dashoffset: 900; } 100% { stroke-dashoffset: 0; } }
+
+      .fold-line { opacity: 0; animation: fadeInSlow 2s ease-in 0.5s forwards; }
+
+      .compass { opacity: 0; animation: compassIn 2s ease-out 4.5s forwards; transform-origin: 820px 230px; }
+      @keyframes compassIn { 0% { opacity: 0; transform: rotate(-90deg) scale(0.5); } 100% { opacity: 0.4; transform: rotate(0deg) scale(1); } }
+
+      .glow-edge { animation: edgeGlow 4s ease-in-out infinite; }
+      @keyframes edgeGlow { 0%, 100% { opacity: 0.15; } 50% { opacity: 0.4; } }
+
+      .lightning { opacity: 0; animation: lightningFlash 6s ease-in-out 2s infinite; }
+      @keyframes lightningFlash { 0%, 85%, 100% { opacity: 0; } 87% { opacity: 1; } 89% { opacity: 0.2; } 91% { opacity: 0.8; } 93% { opacity: 0; } }
+
+      .ink-splat { opacity: 0; animation: splatIn 0.4s ease-out forwards; }
+      .splat1 { animation-delay: 2s; } .splat2 { animation-delay: 3.5s; } .splat3 { animation-delay: 5s; }
+      @keyframes splatIn { 0% { opacity: 0; transform: scale(0); } 60% { opacity: 0.2; transform: scale(1.3); } 100% { opacity: 0.1; transform: scale(1); } }
+    </style>
+
+    <linearGradient id="parchmentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDF8EF"/>
+      <stop offset="30%" stop-color="#F8F0E0"/>
+      <stop offset="50%" stop-color="#F5ECD5"/>
+      <stop offset="70%" stop-color="#F8F0E0"/>
+      <stop offset="100%" stop-color="#FDF8EF"/>
+    </linearGradient>
+    <linearGradient id="edgeGlowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B8860B" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#B8860B" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#B8860B" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="foldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B8860B" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#B8860B" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#B8860B" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="foldGradV" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#B8860B" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#B8860B" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#B8860B" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect class="parchment-bg" x="0" y="0" width="900" height="280" rx="4"/>
+
+  <line class="fold-line" x1="300" y1="0" x2="300" y2="280" stroke="url(#foldGradV)" stroke-width="1"/>
+  <line class="fold-line" x1="600" y1="0" x2="600" y2="280" stroke="url(#foldGradV)" stroke-width="1"/>
+  <line class="fold-line" x1="0" y1="140" x2="900" y2="140" stroke="url(#foldGrad)" stroke-width="1"/>
+
+  <line class="border-line-h" x1="20" y1="15" x2="880" y2="15" stroke="#B8860B" stroke-width="1" opacity="0.4"/>
+  <line class="border-line-h" x1="25" y1="19" x2="875" y2="19" stroke="#740001" stroke-width="0.5" opacity="0.2"/>
+  <line class="border-line-h" x1="20" y1="265" x2="880" y2="265" stroke="#B8860B" stroke-width="1" opacity="0.4"/>
+  <line class="border-line-h" x1="25" y1="261" x2="875" y2="261" stroke="#740001" stroke-width="0.5" opacity="0.2"/>
+  <line class="border-line" x1="15" y1="15" x2="15" y2="265" stroke="#B8860B" stroke-width="1" opacity="0.4"/>
+  <line class="border-line" x1="19" y1="20" x2="19" y2="260" stroke="#740001" stroke-width="0.5" opacity="0.2"/>
+  <line class="border-line" x1="885" y1="15" x2="885" y2="265" stroke="#B8860B" stroke-width="1" opacity="0.4"/>
+  <line class="border-line" x1="881" y1="20" x2="881" y2="260" stroke="#740001" stroke-width="0.5" opacity="0.2"/>
+
+  <g class="corner-deco">
+    <path d="M15,15 L40,15 M15,15 L15,40" stroke="#740001" stroke-width="2" fill="none" opacity="0.5"/>
+    <circle cx="15" cy="15" r="3" fill="#740001" opacity="0.4"/>
+    <path d="M885,15 L860,15 M885,15 L885,40" stroke="#740001" stroke-width="2" fill="none" opacity="0.5"/>
+    <circle cx="885" cy="15" r="3" fill="#740001" opacity="0.4"/>
+    <path d="M15,265 L40,265 M15,265 L15,240" stroke="#740001" stroke-width="2" fill="none" opacity="0.5"/>
+    <circle cx="15" cy="265" r="3" fill="#740001" opacity="0.4"/>
+    <path d="M885,265 L860,265 M885,265 L885,240" stroke="#740001" stroke-width="2" fill="none" opacity="0.5"/>
+    <circle cx="885" cy="265" r="3" fill="#740001" opacity="0.4"/>
+  </g>
+
+  <rect class="glow-edge" x="0" y="0" width="900" height="4" fill="url(#edgeGlowGrad)"/>
+  <rect class="glow-edge" x="0" y="276" width="900" height="4" fill="url(#edgeGlowGrad)"/>
+
+  <g class="footstep fs1" transform="translate(70,200) rotate(-20)">
+    <ellipse cx="0" cy="0" rx="4" ry="7" fill="#C4923E" opacity="0.3"/>
+    <ellipse cx="8" cy="-2" rx="4" ry="7" fill="#C4923E" opacity="0.3"/>
+  </g>
+  <g class="footstep fs2" transform="translate(130,185) rotate(-15)">
+    <ellipse cx="0" cy="0" rx="4" ry="7" fill="#C4923E" opacity="0.3"/>
+    <ellipse cx="8" cy="-2" rx="4" ry="7" fill="#C4923E" opacity="0.3"/>
+  </g>
+  <g class="footstep fs3" transform="translate(195,195) rotate(-10)">
+    <ellipse cx="0" cy="0" rx="4" ry="7" fill="#C4923E" opacity="0.3"/>
+    <ellipse cx="8" cy="-2" rx="4" ry="7" fill="#C4923E" opacity="0.3"/>
+  </g>
+  <g class="footstep fs4" transform="translate(255,180) rotate(-5)">
+    <ellipse cx="0" cy="0" rx="4" ry="7" fill="#C4923E" opacity="0.3"/>
+    <ellipse cx="8" cy="-2" rx="4" ry="7" fill="#C4923E" opacity="0.3"/>
+  </g>
+  <g class="footstep fs5" transform="translate(620,65) rotate(15)">
+    <ellipse cx="0" cy="0" rx="3.5" ry="6" fill="#C4923E" opacity="0.25"/>
+    <ellipse cx="7" cy="-1" rx="3.5" ry="6" fill="#C4923E" opacity="0.25"/>
+  </g>
+  <g class="footstep fs6" transform="translate(680,75) rotate(10)">
+    <ellipse cx="0" cy="0" rx="3.5" ry="6" fill="#C4923E" opacity="0.25"/>
+    <ellipse cx="7" cy="-1" rx="3.5" ry="6" fill="#C4923E" opacity="0.25"/>
+  </g>
+  <g class="footstep fs7" transform="translate(740,60) rotate(20)">
+    <ellipse cx="0" cy="0" rx="3.5" ry="6" fill="#C4923E" opacity="0.25"/>
+    <ellipse cx="7" cy="-1" rx="3.5" ry="6" fill="#C4923E" opacity="0.25"/>
+  </g>
+  <g class="footstep fs8" transform="translate(800,70) rotate(5)">
+    <ellipse cx="0" cy="0" rx="3.5" ry="6" fill="#C4923E" opacity="0.25"/>
+    <ellipse cx="7" cy="-1" rx="3.5" ry="6" fill="#C4923E" opacity="0.25"/>
+  </g>
+
+  <circle class="ink-splat splat1" cx="160" cy="90" r="3" fill="#D4C4A0"/>
+  <circle class="ink-splat splat1" cx="163" cy="87" r="1.5" fill="#D4C4A0"/>
+  <circle class="ink-splat splat2" cx="700" cy="210" r="2.5" fill="#D4C4A0"/>
+  <circle class="ink-splat splat3" cx="400" cy="245" r="2" fill="#D4C4A0"/>
+
+  <g class="lightning" transform="translate(435,55)">
+    <path d="M0,0 L-6,12 L2,12 L-4,25 L10,10 L3,10 Z" fill="#740001" opacity="0.7"/>
+  </g>
+
+  <text class="draw-title" x="450" y="110" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="48" font-weight="bold" letter-spacing="8">WIZARDING DEVELOPER</text>
+  <text class="draw-title-fill" x="450" y="110" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="48" font-weight="bold" letter-spacing="8" fill="#740001">WIZARDING DEVELOPER</text>
+
+  <g class="draw-title-fill" transform="translate(120,82)">
+    <path d="M0,0 L-5,10 L2,10 L-3,22 L8,8 L2,8 Z" fill="#740001" opacity="0.5"/>
+  </g>
+  <g class="draw-title-fill" transform="translate(770,82)">
+    <path d="M0,0 L-5,10 L2,10 L-3,22 L8,8 L2,8 Z" fill="#740001" opacity="0.5"/>
+  </g>
+
+  <text class="draw-subtitle" x="450" y="155" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-style="italic" letter-spacing="3">I solemnly swear that I am up to good code.</text>
+  <text class="draw-subtitle-fill" x="450" y="155" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-style="italic" letter-spacing="3" fill="#8B6914">I solemnly swear that I am up to good code.</text>
+
+  <line class="border-line-h" x1="250" y1="170" x2="650" y2="170" stroke="#B8860B" stroke-width="0.5" opacity="0.3"/>
+
+  <text class="draw-subtitle-fill" x="450" y="195" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" letter-spacing="6" fill="#8B7355" opacity="0.5">MESSRS. MOONY, WORMTAIL, PADFOOT &amp; PRONGS</text>
+  <text class="draw-subtitle-fill" x="450" y="215" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" letter-spacing="4" fill="#8B7355" opacity="0.4">PURVEYORS OF AIDS TO MAGICAL CODE-CRAFT</text>
+
+  <g class="compass">
+    <path d="M820,218 L825,230 L820,225 L815,230 Z" fill="#740001" opacity="0.4"/>
+    <path d="M820,242 L825,230 L820,235 L815,230 Z" fill="#B8860B" opacity="0.3"/>
+    <path d="M808,230 L820,225 L815,230 L820,235 Z" fill="#B8860B" opacity="0.3"/>
+    <path d="M832,230 L820,225 L825,230 L820,235 Z" fill="#740001" opacity="0.4"/>
+    <text x="820" y="213" text-anchor="middle" font-family="Georgia, serif" font-size="7" fill="#740001" opacity="0.4">N</text>
+    <text x="820" y="252" text-anchor="middle" font-family="Georgia, serif" font-size="7" fill="#740001" opacity="0.4">S</text>
+    <text x="802" y="233" text-anchor="middle" font-family="Georgia, serif" font-size="7" fill="#740001" opacity="0.4">W</text>
+    <text x="838" y="233" text-anchor="middle" font-family="Georgia, serif" font-size="7" fill="#740001" opacity="0.4">E</text>
+  </g>
+
+  <g class="fold-line" opacity="0.03">
+    <line x1="100" y1="30" x2="100" y2="250" stroke="#B8860B" stroke-width="0.5"/>
+    <line x1="200" y1="30" x2="200" y2="250" stroke="#B8860B" stroke-width="0.5"/>
+    <line x1="400" y1="30" x2="400" y2="250" stroke="#B8860B" stroke-width="0.5"/>
+    <line x1="500" y1="30" x2="500" y2="250" stroke="#B8860B" stroke-width="0.5"/>
+    <line x1="700" y1="30" x2="700" y2="250" stroke="#B8860B" stroke-width="0.5"/>
+    <line x1="800" y1="30" x2="800" y2="250" stroke="#B8860B" stroke-width="0.5"/>
+    <line x1="30" y1="70" x2="870" y2="70" stroke="#B8860B" stroke-width="0.5"/>
+    <line x1="30" y1="210" x2="870" y2="210" stroke="#B8860B" stroke-width="0.5"/>
+  </g>
+</svg>

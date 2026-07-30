@@ -1,0 +1,265 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <style>
+      /* ═══ Ethereal Phoenix Patronus — Glowing Animation ═══ */
+
+      /* Outer glow pulse */
+      .patronus-outer-glow {
+        animation: outerGlow 4s ease-in-out infinite;
+      }
+      @keyframes outerGlow {
+        0%, 100% { opacity: 0.05; transform: scale(0.95); }
+        50% { opacity: 0.15; transform: scale(1.05); }
+      }
+
+      /* Main body ethereal shimmer */
+      .patronus-body {
+        animation: bodyShimmer 3s ease-in-out infinite;
+      }
+      @keyframes bodyShimmer {
+        0%, 100% { opacity: 0.7; filter: brightness(1); }
+        50% { opacity: 0.9; filter: brightness(1.2); }
+      }
+
+      /* Wing flap — left */
+      .phoenix-wing-l {
+        animation: wingFlapL 2.5s ease-in-out infinite;
+        transform-origin: 200px 140px;
+      }
+      @keyframes wingFlapL {
+        0%, 100% { transform: rotate(0deg) scaleX(1); }
+        25% { transform: rotate(-5deg) scaleX(1.02); }
+        50% { transform: rotate(3deg) scaleX(0.98); }
+        75% { transform: rotate(-2deg) scaleX(1.01); }
+      }
+
+      /* Wing flap — right */
+      .phoenix-wing-r {
+        animation: wingFlapR 2.5s ease-in-out infinite;
+        transform-origin: 200px 140px;
+      }
+      @keyframes wingFlapR {
+        0%, 100% { transform: rotate(0deg) scaleX(1); }
+        25% { transform: rotate(5deg) scaleX(1.02); }
+        50% { transform: rotate(-3deg) scaleX(0.98); }
+        75% { transform: rotate(2deg) scaleX(1.01); }
+      }
+
+      /* Tail feathers sway */
+      .tail-feathers {
+        animation: tailSway 4s ease-in-out infinite;
+        transform-origin: 200px 200px;
+      }
+      @keyframes tailSway {
+        0%, 100% { transform: rotate(0deg); }
+        30% { transform: rotate(3deg); }
+        60% { transform: rotate(-2deg); }
+      }
+
+      /* Head bob */
+      .phoenix-head {
+        animation: headBob 3s ease-in-out infinite;
+      }
+      @keyframes headBob {
+        0%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-3px); }
+        70% { transform: translateY(1px); }
+      }
+
+      /* Particle trail — rising wisps */
+      .patronus-particle { opacity: 0; }
+      .pp1 { animation: particleRise 3s ease-out 0s infinite; }
+      .pp2 { animation: particleRise 3s ease-out 0.5s infinite; }
+      .pp3 { animation: particleRise 3s ease-out 1s infinite; }
+      .pp4 { animation: particleRise 3s ease-out 1.5s infinite; }
+      .pp5 { animation: particleRise 3s ease-out 2s infinite; }
+      .pp6 { animation: particleRise 3s ease-out 2.5s infinite; }
+      .pp7 { animation: particleRise 3.5s ease-out 0.3s infinite; }
+      .pp8 { animation: particleRise 3.5s ease-out 0.8s infinite; }
+      .pp9 { animation: particleRise 3.5s ease-out 1.3s infinite; }
+      .pp10 { animation: particleRise 3.5s ease-out 1.8s infinite; }
+      .pp11 { animation: particleRise 4s ease-out 0.6s infinite; }
+      .pp12 { animation: particleRise 4s ease-out 1.6s infinite; }
+
+      @keyframes particleRise {
+        0% { opacity: 0; transform: translateY(0) scale(0); }
+        15% { opacity: 0.6; transform: scale(1); }
+        60% { opacity: 0.3; }
+        100% { opacity: 0; transform: translateY(-60px) scale(0.2); }
+      }
+
+      /* Floating embers near the tail */
+      .ember { opacity: 0; }
+      .em1 { animation: emberFloat 4s ease-in-out 0.2s infinite; }
+      .em2 { animation: emberFloat 4s ease-in-out 0.8s infinite; }
+      .em3 { animation: emberFloat 4s ease-in-out 1.4s infinite; }
+      .em4 { animation: emberFloat 4s ease-in-out 2s infinite; }
+      .em5 { animation: emberFloat 3.5s ease-in-out 0.5s infinite; }
+      .em6 { animation: emberFloat 3.5s ease-in-out 1.1s infinite; }
+
+      @keyframes emberFloat {
+        0% { opacity: 0; transform: translate(0, 0) scale(0.5); }
+        20% { opacity: 0.7; transform: scale(1); }
+        50% { opacity: 0.4; }
+        100% { opacity: 0; transform: translate(-20px, -40px) scale(0); }
+      }
+
+      /* Eye glow */
+      .phoenix-eye {
+        animation: eyeGlow 3s ease-in-out infinite;
+      }
+      @keyframes eyeGlow {
+        0%, 100% { opacity: 0.7; }
+        50% { opacity: 1; }
+      }
+
+      /* Inner light core */
+      .inner-light {
+        animation: innerPulse 2s ease-in-out infinite;
+      }
+      @keyframes innerPulse {
+        0%, 100% { opacity: 0.15; transform: scale(0.9); }
+        50% { opacity: 0.35; transform: scale(1.1); }
+      }
+    </style>
+
+    <!-- Patronus silver-blue glow gradient -->
+    <radialGradient id="patronusGlow" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#B8D4E3" stop-opacity="0.8"/>
+      <stop offset="40%" stop-color="#7FB8D4" stop-opacity="0.5"/>
+      <stop offset="70%" stop-color="#4A90A4" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#2C6E8A" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Body ethereal gradient -->
+    <linearGradient id="bodyGrad" x1="30%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#D4E8F0" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#A8D0E6" stop-opacity="0.7"/>
+      <stop offset="60%" stop-color="#7FB8D4" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#5BA0C0" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <!-- Wing gradient -->
+    <linearGradient id="wingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4E8F0" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#A8D0E6" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#7FB8D4" stop-opacity="0.15"/>
+    </linearGradient>
+
+    <!-- Tail gradient -->
+    <linearGradient id="tailGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#A8D0E6" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#7FB8D4" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#5BA0C0" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <!-- Glow blur filter -->
+    <filter id="etherealBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Soft outer glow filter -->
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="12"/>
+    </filter>
+  </defs>
+
+  <!-- ═══ Outer Ethereal Glow ═══ -->
+  <ellipse class="patronus-outer-glow" cx="200" cy="150" rx="140" ry="120" fill="url(#patronusGlow)" filter="url(#softGlow)"/>
+
+  <!-- ═══ Inner Light Core ═══ -->
+  <ellipse class="inner-light" cx="200" cy="140" rx="50" ry="40" fill="#B8D4E3" opacity="0.2"/>
+
+  <!-- ═══ Particle Trail — Rising Wisps ═══ -->
+  <circle class="patronus-particle pp1" cx="170" cy="180" r="3" fill="#B8D4E3"/>
+  <circle class="patronus-particle pp2" cx="230" cy="190" r="2.5" fill="#D4E8F0"/>
+  <circle class="patronus-particle pp3" cx="150" cy="170" r="2" fill="#A8D0E6"/>
+  <circle class="patronus-particle pp4" cx="250" cy="175" r="3" fill="#B8D4E3"/>
+  <circle class="patronus-particle pp5" cx="190" cy="195" r="2" fill="#D4E8F0"/>
+  <circle class="patronus-particle pp6" cx="210" cy="200" r="2.5" fill="#A8D0E6"/>
+  <circle class="patronus-particle pp7" cx="160" cy="160" r="1.5" fill="#D4E8F0"/>
+  <circle class="patronus-particle pp8" cx="240" cy="165" r="2" fill="#B8D4E3"/>
+  <circle class="patronus-particle pp9" cx="180" cy="185" r="1.8" fill="#A8D0E6"/>
+  <circle class="patronus-particle pp10" cx="220" cy="195" r="2.2" fill="#D4E8F0"/>
+  <circle class="patronus-particle pp11" cx="195" cy="205" r="1.5" fill="#B8D4E3"/>
+  <circle class="patronus-particle pp12" cx="205" cy="210" r="1.8" fill="#A8D0E6"/>
+
+  <!-- ═══ Phoenix Body ═══ -->
+  <g class="patronus-body">
+    <!-- Left Wing -->
+    <g class="phoenix-wing-l">
+      <path d="M195,135 
+        Q170,100 130,80 
+        Q105,68 80,72 
+        Q65,75 70,85 
+        Q80,95 100,105 
+        Q130,118 160,130 
+        Q175,135 190,138" 
+        fill="url(#wingGrad)" stroke="#A8D0E6" stroke-width="0.5" opacity="0.7" filter="url(#etherealBlur)"/>
+      <!-- Wing feather lines -->
+      <path d="M185,130 Q155,105 120,85" fill="none" stroke="#B8D4E3" stroke-width="0.4" opacity="0.3"/>
+      <path d="M180,133 Q150,112 110,95" fill="none" stroke="#B8D4E3" stroke-width="0.3" opacity="0.25"/>
+      <path d="M175,136 Q148,118 105,105" fill="none" stroke="#B8D4E3" stroke-width="0.3" opacity="0.2"/>
+    </g>
+
+    <!-- Right Wing -->
+    <g class="phoenix-wing-r">
+      <path d="M205,135 
+        Q230,100 270,80 
+        Q295,68 320,72 
+        Q335,75 330,85 
+        Q320,95 300,105 
+        Q270,118 240,130 
+        Q225,135 210,138" 
+        fill="url(#wingGrad)" stroke="#A8D0E6" stroke-width="0.5" opacity="0.7" filter="url(#etherealBlur)"/>
+      <!-- Wing feather lines -->
+      <path d="M215,130 Q245,105 280,85" fill="none" stroke="#B8D4E3" stroke-width="0.4" opacity="0.3"/>
+      <path d="M220,133 Q250,112 290,95" fill="none" stroke="#B8D4E3" stroke-width="0.3" opacity="0.25"/>
+      <path d="M225,136 Q252,118 295,105" fill="none" stroke="#B8D4E3" stroke-width="0.3" opacity="0.2"/>
+    </g>
+
+    <!-- Torso -->
+    <ellipse cx="200" cy="145" rx="22" ry="28" fill="url(#bodyGrad)" stroke="#A8D0E6" stroke-width="0.5" opacity="0.8" filter="url(#etherealBlur)"/>
+
+    <!-- Tail Feathers -->
+    <g class="tail-feathers">
+      <path d="M195,170 Q185,210 175,250 Q172,265 178,268 Q185,260 192,230 Q195,215 198,175" 
+            fill="url(#tailGrad)" stroke="#A8D0E6" stroke-width="0.3" opacity="0.5"/>
+      <path d="M200,172 Q200,215 200,255 Q200,272 205,268 Q208,258 205,230 Q203,210 202,175" 
+            fill="url(#tailGrad)" stroke="#A8D0E6" stroke-width="0.3" opacity="0.45"/>
+      <path d="M205,170 Q215,210 225,250 Q228,265 222,268 Q215,260 208,230 Q205,215 203,175" 
+            fill="url(#tailGrad)" stroke="#A8D0E6" stroke-width="0.3" opacity="0.4"/>
+      <!-- Outer tail wisps -->
+      <path d="M190,168 Q175,200 160,240 Q155,255 162,258" 
+            fill="none" stroke="#A8D0E6" stroke-width="0.5" opacity="0.25"/>
+      <path d="M210,168 Q225,200 240,240 Q245,255 238,258" 
+            fill="none" stroke="#A8D0E6" stroke-width="0.5" opacity="0.25"/>
+    </g>
+
+    <!-- Head -->
+    <g class="phoenix-head">
+      <!-- Neck -->
+      <path d="M195,120 Q198,112 200,105 Q202,112 205,120" fill="url(#bodyGrad)" stroke="#A8D0E6" stroke-width="0.3" opacity="0.7"/>
+      <!-- Head shape -->
+      <ellipse cx="200" cy="102" rx="12" ry="10" fill="url(#bodyGrad)" stroke="#A8D0E6" stroke-width="0.4" opacity="0.8" filter="url(#etherealBlur)"/>
+      <!-- Beak -->
+      <path d="M210,100 L220,98 L212,103" fill="#D4E8F0" stroke="#A8D0E6" stroke-width="0.3" opacity="0.6"/>
+      <!-- Crest feathers -->
+      <path d="M195,94 Q190,82 185,75 Q183,72 186,74 Q192,80 196,92" fill="url(#tailGrad)" stroke="#A8D0E6" stroke-width="0.3" opacity="0.5"/>
+      <path d="M198,93 Q195,78 193,68 Q192,64 195,67 Q198,75 200,91" fill="url(#tailGrad)" stroke="#A8D0E6" stroke-width="0.3" opacity="0.45"/>
+      <path d="M202,93 Q202,80 204,72 Q205,68 206,72 Q205,80 203,91" fill="url(#tailGrad)" stroke="#A8D0E6" stroke-width="0.3" opacity="0.4"/>
+      <!-- Eye -->
+      <circle class="phoenix-eye" cx="206" cy="99" r="2" fill="#EEBA30" opacity="0.8"/>
+      <circle cx="206" cy="99" r="0.8" fill="#FCE074"/>
+    </g>
+  </g>
+
+  <!-- ═══ Floating Embers ═══ -->
+  <circle class="ember em1" cx="160" cy="220" r="2" fill="#B8D4E3"/>
+  <circle class="ember em2" cx="240" cy="230" r="1.5" fill="#D4E8F0"/>
+  <circle class="ember em3" cx="175" cy="240" r="1.8" fill="#A8D0E6"/>
+  <circle class="ember em4" cx="225" cy="245" r="2" fill="#B8D4E3"/>
+  <circle class="ember em5" cx="190" cy="250" r="1.2" fill="#D4E8F0"/>
+  <circle class="ember em6" cx="210" cy="255" r="1.5" fill="#A8D0E6"/>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" width="100%">
+  <defs>
+    <linearGradient id="hufflepuffGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#372E29"/>
+      <stop offset="50%" stop-color="#1F1916"/>
+      <stop offset="100%" stop-color="#0F0C0B"/>
+    </linearGradient>
+    <linearGradient id="yellowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ECB939"/>
+      <stop offset="50%" stop-color="#FCE074"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <pattern id="pufferPattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="0.9" fill="#ECB939" opacity="0.5"/>
+      <circle cx="45" cy="45" r="1.2" fill="#F0C75E" opacity="0.7"/>
+    </pattern>
+    <style>
+      .bg { fill: url(#hufflepuffGrad); }
+      .title { font-family: 'Cinzel', 'Georgia', serif; font-weight: 700; fill: url(#yellowGrad); font-size: 38px; letter-spacing: 4px; }
+      .subtitle { font-family: 'Courier New', monospace; font-size: 16px; fill: #ECB939; opacity: 0.9; letter-spacing: 2px; }
+      .motto { font-family: 'Georgia', serif; font-style: italic; font-size: 14px; fill: #E5E7EB; opacity: 0.85; }
+      .border-line { stroke: url(#yellowGrad); stroke-width: 2; fill: none; }
+      .corner-symbol { fill: #ECB939; opacity: 0.8; }
+    </style>
+  </defs>
+  <rect x="5" y="5" width="890" height="220" rx="15" class="bg" stroke="#ECB939" stroke-width="2"/>
+  <rect x="15" y="15" width="870" height="200" rx="10" class="border-line" stroke-dasharray="8 4"/>
+  <rect x="20" y="20" width="860" height="190" rx="8" class="bg"/>
+  <rect x="10" y="10" width="880" height="210" rx="12" fill="url(#pufferPattern)" />
+  <path d="M 30 30 L 50 30 L 30 50 Z" class="corner-symbol"/>
+  <path d="M 870 30 L 850 30 L 870 50 Z" class="corner-symbol"/>
+  <path d="M 30 200 L 50 200 L 30 180 Z" class="corner-symbol"/>
+  <path d="M 870 200 L 850 200 L 870 180 Z" class="corner-symbol"/>
+  <text x="450" y="70" text-anchor="middle" class="subtitle">🦡 LOYAL &amp; TRUE 🦡</text>
+  <text x="450" y="120" text-anchor="middle" class="title">HUFFLEPUFF DEVELOPER</text>
+  <text x="450" y="160" text-anchor="middle" class="motto">"Where those patient Hufflepuffs are true and unafraid of toil."</text>
+  <text x="450" y="188" text-anchor="middle" class="subtitle">🦡 DEDICATION • PATIENCE • LOYALTY 🦡</text>
+</svg>

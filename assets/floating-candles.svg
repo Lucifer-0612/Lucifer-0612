@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 160" width="800" height="160">
+  <defs>
+    <style>
+      /* ═══ Floating Candles — Great Hall Atmosphere ═══ */
+
+      /* Individual candle hover + bob */
+      .candle1 { animation: float1 4.5s ease-in-out infinite; }
+      .candle2 { animation: float2 5s ease-in-out 0.3s infinite; }
+      .candle3 { animation: float3 4.2s ease-in-out 0.6s infinite; }
+      .candle4 { animation: float1 4.8s ease-in-out 0.9s infinite; }
+      .candle5 { animation: float2 4.3s ease-in-out 1.2s infinite; }
+      .candle6 { animation: float3 5.2s ease-in-out 0.4s infinite; }
+      .candle7 { animation: float1 4.6s ease-in-out 0.7s infinite; }
+      .candle8 { animation: float2 4.9s ease-in-out 1s infinite; }
+      .candle9 { animation: float3 4.4s ease-in-out 0.2s infinite; }
+      .candle10 { animation: float1 5.1s ease-in-out 0.5s infinite; }
+      .candle11 { animation: float2 4.7s ease-in-out 0.8s infinite; }
+      .candle12 { animation: float3 4.5s ease-in-out 1.1s infinite; }
+
+      @keyframes float1 {
+        0%, 100% { transform: translateY(0); }
+        30% { transform: translateY(-6px); }
+        60% { transform: translateY(2px); }
+      }
+      @keyframes float2 {
+        0%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-8px); }
+        70% { transform: translateY(3px); }
+      }
+      @keyframes float3 {
+        0%, 100% { transform: translateY(0); }
+        25% { transform: translateY(-5px); }
+        55% { transform: translateY(4px); }
+        80% { transform: translateY(-2px); }
+      }
+
+      /* Flame flicker */
+      .flame {
+        animation: flicker 0.15s ease-in-out infinite alternate;
+        transform-origin: center bottom;
+      }
+      .f1 { animation-duration: 0.12s; }
+      .f2 { animation-duration: 0.18s; }
+      .f3 { animation-duration: 0.14s; }
+      .f4 { animation-duration: 0.16s; }
+      .f5 { animation-duration: 0.13s; }
+      .f6 { animation-duration: 0.17s; }
+
+      @keyframes flicker {
+        0% { transform: scaleX(1) scaleY(1); opacity: 0.85; }
+        50% { transform: scaleX(0.92) scaleY(1.05); opacity: 1; }
+        100% { transform: scaleX(1.05) scaleY(0.95); opacity: 0.9; }
+      }
+
+      /* Flame glow */
+      .flame-glow {
+        animation: glowPulse 1.5s ease-in-out infinite alternate;
+      }
+      @keyframes glowPulse {
+        0% { opacity: 0.15; transform: scale(0.9); }
+        100% { opacity: 0.35; transform: scale(1.1); }
+      }
+
+      /* Wax drip */
+      .drip {
+        animation: dripDown 8s ease-in infinite;
+        opacity: 0;
+      }
+      .d1 { animation-delay: 2s; }
+      .d2 { animation-delay: 5s; }
+      .d3 { animation-delay: 3.5s; }
+      .d4 { animation-delay: 7s; }
+      .d5 { animation-delay: 4s; }
+
+      @keyframes dripDown {
+        0% { opacity: 0; transform: translateY(0) scaleY(0); }
+        5% { opacity: 0.6; transform: scaleY(1); }
+        15% { opacity: 0.4; transform: translateY(8px); }
+        25% { opacity: 0; transform: translateY(14px); }
+        100% { opacity: 0; }
+      }
+
+      /* Sparkle motes */
+      .mote { opacity: 0; }
+      .m1 { animation: moteDrift 6s ease-in-out 0.5s infinite; }
+      .m2 { animation: moteDrift 7s ease-in-out 1.5s infinite; }
+      .m3 { animation: moteDrift 5.5s ease-in-out 2.5s infinite; }
+      .m4 { animation: moteDrift 6.5s ease-in-out 3.5s infinite; }
+      .m5 { animation: moteDrift 5s ease-in-out 0.8s infinite; }
+      .m6 { animation: moteDrift 7.5s ease-in-out 2s infinite; }
+      .m7 { animation: moteDrift 6s ease-in-out 3s infinite; }
+      .m8 { animation: moteDrift 5.5s ease-in-out 1s infinite; }
+
+      @keyframes moteDrift {
+        0% { opacity: 0; transform: translate(0, 0) scale(0); }
+        20% { opacity: 0.5; transform: scale(1); }
+        50% { opacity: 0.3; }
+        100% { opacity: 0; transform: translate(10px, -30px) scale(0); }
+      }
+    </style>
+
+    <!-- Candle wax gradient -->
+    <linearGradient id="waxGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#F5E6C8"/>
+      <stop offset="40%" stop-color="#E8D5A8"/>
+      <stop offset="100%" stop-color="#D4C088"/>
+    </linearGradient>
+
+    <!-- Flame gradient -->
+    <radialGradient id="flameGrad" cx="50%" cy="70%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="30%" stop-color="#FCE074"/>
+      <stop offset="60%" stop-color="#EEBA30"/>
+      <stop offset="100%" stop-color="#C69214" stop-opacity="0.3"/>
+    </radialGradient>
+
+    <!-- Flame outer glow -->
+    <radialGradient id="flameGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#EEBA30" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#EEBA30" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Reusable candle template -->
+    <g id="candleUnit">
+      <!-- Candle body -->
+      <rect x="-3" y="0" width="6" height="28" rx="1.5" fill="url(#waxGrad)" stroke="#C4B078" stroke-width="0.3"/>
+      <!-- Wick -->
+      <line x1="0" y1="0" x2="0" y2="-4" stroke="#4A3728" stroke-width="1" stroke-linecap="round"/>
+      <!-- Flame glow aura -->
+      <circle class="flame-glow" cx="0" cy="-8" r="10" fill="url(#flameGlow)"/>
+      <!-- Flame inner -->
+      <ellipse class="flame f1" cx="0" cy="-8" rx="3" ry="5.5" fill="url(#flameGrad)"/>
+      <!-- Flame core -->
+      <ellipse class="flame f2" cx="0" cy="-7" rx="1.2" ry="3" fill="#FFFFFF" opacity="0.7"/>
+    </g>
+  </defs>
+
+  <!-- ═══ Row 1 — Back row (smaller, dimmer) ═══ -->
+  <g class="candle1" transform="translate(80, 40)" opacity="0.5">
+    <use href="#candleUnit" transform="scale(0.65)"/>
+  </g>
+  <g class="candle2" transform="translate(190, 35)" opacity="0.45">
+    <use href="#candleUnit" transform="scale(0.6)"/>
+  </g>
+  <g class="candle3" transform="translate(310, 38)" opacity="0.5">
+    <use href="#candleUnit" transform="scale(0.65)"/>
+  </g>
+  <g class="candle4" transform="translate(430, 32)" opacity="0.4">
+    <use href="#candleUnit" transform="scale(0.55)"/>
+  </g>
+  <g class="candle5" transform="translate(550, 36)" opacity="0.5">
+    <use href="#candleUnit" transform="scale(0.6)"/>
+  </g>
+  <g class="candle6" transform="translate(680, 34)" opacity="0.45">
+    <use href="#candleUnit" transform="scale(0.6)"/>
+  </g>
+
+  <!-- ═══ Row 2 — Front row (larger, brighter) ═══ -->
+  <g class="candle7" transform="translate(130, 70)" opacity="0.8">
+    <use href="#candleUnit" transform="scale(0.85)"/>
+  </g>
+  <g class="candle8" transform="translate(260, 65)" opacity="0.75">
+    <use href="#candleUnit" transform="scale(0.8)"/>
+  </g>
+  <g class="candle9" transform="translate(400, 68)" opacity="0.85">
+    <use href="#candleUnit" transform="scale(0.9)"/>
+  </g>
+  <g class="candle10" transform="translate(530, 62)" opacity="0.75">
+    <use href="#candleUnit" transform="scale(0.8)"/>
+  </g>
+  <g class="candle11" transform="translate(650, 66)" opacity="0.8">
+    <use href="#candleUnit" transform="scale(0.85)"/>
+  </g>
+  <g class="candle12" transform="translate(750, 70)" opacity="0.7">
+    <use href="#candleUnit" transform="scale(0.75)"/>
+  </g>
+
+  <!-- ═══ Wax Drips ═══ -->
+  <ellipse class="drip d1" cx="130" cy="95" rx="1.5" ry="2" fill="#E8D5A8"/>
+  <ellipse class="drip d2" cx="400" cy="92" rx="1.2" ry="1.8" fill="#D4C088"/>
+  <ellipse class="drip d3" cx="260" cy="90" rx="1" ry="1.5" fill="#E8D5A8"/>
+  <ellipse class="drip d4" cx="650" cy="91" rx="1.3" ry="2" fill="#D4C088"/>
+  <ellipse class="drip d5" cx="530" cy="88" rx="1" ry="1.5" fill="#E8D5A8"/>
+
+  <!-- ═══ Floating Light Motes ═══ -->
+  <circle class="mote m1" cx="120" cy="90" r="1" fill="#FCE074"/>
+  <circle class="mote m2" cx="250" cy="50" r="0.8" fill="#EEBA30"/>
+  <circle class="mote m3" cx="370" cy="80" r="1.2" fill="#FCE074"/>
+  <circle class="mote m4" cx="500" cy="45" r="0.8" fill="#EEBA30"/>
+  <circle class="mote m5" cx="600" cy="75" r="1" fill="#FCE074"/>
+  <circle class="mote m6" cx="700" cy="55" r="0.8" fill="#EEBA30"/>
+  <circle class="mote m7" cx="160" cy="60" r="0.7" fill="#FCE074"/>
+  <circle class="mote m8" cx="460" cy="85" r="0.9" fill="#EEBA30"/>
+
+  <!-- ═══ Subtle text ═══ -->
+  <text x="400" y="145" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" letter-spacing="5" fill="#EEBA30" opacity="0.2">
+    THE GREAT HALL
+  </text>
+</svg>

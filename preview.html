@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="dark" data-dark-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>⚡ Wizarding Developer — GitHub Profile Preview</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-dark.min.css"/>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:#010409;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;display:flex;flex-direction:column;align-items:center;padding:24px 12px}
+    .wrapper{max-width:920px;width:100%;background:#0d1117;border:1px solid #30363d;border-radius:6px;overflow:hidden}
+    .tab-bar{background:#161b22;border-bottom:1px solid #30363d;padding:8px 16px;display:flex;align-items:center;gap:12px}
+    .tab{padding:8px 16px;border-radius:6px 6px 0 0;font-size:14px;color:#8b949e;cursor:pointer;border:1px solid transparent}
+    .tab.active{background:#0d1117;color:#e6edf3;border-color:#30363d;border-bottom-color:#0d1117;margin-bottom:-1px}
+    .content{padding:32px 40px}
+    .markdown-body{font-size:16px}
+    .markdown-body img{max-width:100%;display:inline-block}
+    .markdown-body table{width:100%;border-collapse:collapse;margin:16px 0}
+    .markdown-body td,.markdown-body th{padding:12px 16px;border:1px solid #30363d}
+    .snitch-divider{margin:32px 0;text-align:center}
+    .snitch-divider img{width:100%;max-width:800px}
+    .badge-row{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:12px 0}
+    .badge-row img{height:28px}
+    .about-section{display:flex;gap:24px;align-items:flex-start}
+    .about-section .about-text{flex:1}
+    .about-section .about-img{flex-shrink:0;width:280px;border-radius:12px;overflow:hidden}
+    .about-section .about-img img{width:100%;border-radius:12px}
+    .project-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:20px 0}
+    .project-card{background:#161b22;border:1px solid #740001;border-radius:8px;padding:20px;text-align:center}
+    .project-card h3{color:#EEBA30;margin-bottom:8px;font-size:16px}
+    .project-card p{color:#8b949e;font-size:13px;margin:8px 0}
+    .project-card .badges{display:flex;flex-wrap:wrap;gap:4px;justify-content:center;margin-top:10px}
+    .project-card .badges img{height:20px}
+    .stats-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:16px 0}
+    .stats-row img{height:180px;border-radius:6px}
+    .icons-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:8px 0}
+    details{background:#161b22;border:1px solid #30363d;border-radius:6px;padding:16px;margin:16px 0}
+    summary{cursor:pointer;color:#EEBA30;font-weight:600}
+    details table{margin-top:12px}
+    .activity-graph{width:100%;border-radius:6px;border:1px solid #740001}
+    .social-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:16px 0}
+    .social-row img{height:32px}
+    .gold{color:#EEBA30}
+    .muted{color:#8b949e}
+    .ascii-owl{background:#161b22;border:1px solid #30363d;border-radius:6px;padding:16px;display:inline-block;font-family:'Courier New',monospace;color:#EEBA30;font-size:14px;line-height:1.4}
+    blockquote{border-left:4px solid #EEBA30;padding:8px 16px;margin:16px 0;color:#E5E7EB;font-style:italic;background:rgba(238,186,48,0.05);border-radius:0 6px 6px 0}
+    h2{color:#EEBA30;border-bottom:1px solid #740001;padding-bottom:8px;margin:24px 0 16px}
+    h3{color:#E5E7EB;margin:16px 0 8px}
+    code{background:#161b22;padding:2px 6px;border-radius:4px;color:#EEBA30;font-size:14px}
+    .visitor-badge{margin-top:8px}
+    .visitor-badge img{height:24px}
+    ul{padding-left:24px;margin:8px 0}
+    li{margin:6px 0;line-height:1.6}
+    /* 3D Calendar placeholder */
+    .calendar-3d-placeholder{background:linear-gradient(135deg,#1A0000 0%,#0d1117 50%,#1A0000 100%);border:1px solid #740001;border-radius:12px;padding:40px 20px;text-align:center;position:relative;overflow:hidden}
+    .calendar-3d-placeholder::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 14px,rgba(116,0,1,0.08) 14px,rgba(116,0,1,0.08) 15px);pointer-events:none}
+    .calendar-3d-placeholder .skyline{display:flex;align-items:flex-end;justify-content:center;gap:3px;height:120px;margin:20px auto;max-width:600px}
+    .calendar-3d-placeholder .tower{background:linear-gradient(to top,#3B0000,#740001,#EEBA30);border-radius:2px 2px 0 0;width:8px;animation:towerGrow 2s ease-out forwards;opacity:0}
+    @keyframes towerGrow{0%{height:0;opacity:0}100%{opacity:1}}
+    .tower:nth-child(1){height:20px;animation-delay:0.05s} .tower:nth-child(2){height:45px;animation-delay:0.1s}
+    .tower:nth-child(3){height:30px;animation-delay:0.15s} .tower:nth-child(4){height:60px;animation-delay:0.2s}
+    .tower:nth-child(5){height:80px;animation-delay:0.25s} .tower:nth-child(6){height:55px;animation-delay:0.3s}
+    .tower:nth-child(7){height:100px;animation-delay:0.35s} .tower:nth-child(8){height:70px;animation-delay:0.4s}
+    .tower:nth-child(9){height:90px;animation-delay:0.45s} .tower:nth-child(10){height:40px;animation-delay:0.5s}
+    .tower:nth-child(11){height:75px;animation-delay:0.55s} .tower:nth-child(12){height:110px;animation-delay:0.6s}
+    .tower:nth-child(13){height:65px;animation-delay:0.65s} .tower:nth-child(14){height:95px;animation-delay:0.7s}
+    .tower:nth-child(15){height:50px;animation-delay:0.75s} .tower:nth-child(16){height:85px;animation-delay:0.8s}
+    .tower:nth-child(17){height:35px;animation-delay:0.85s} .tower:nth-child(18){height:70px;animation-delay:0.9s}
+    .tower:nth-child(19){height:105px;animation-delay:0.95s} .tower:nth-child(20){height:60px;animation-delay:1s}
+    .tower:nth-child(21){height:45px;animation-delay:1.05s} .tower:nth-child(22){height:80px;animation-delay:1.1s}
+    .tower:nth-child(23){height:25px;animation-delay:1.15s} .tower:nth-child(24){height:55px;animation-delay:1.2s}
+    .tower:nth-child(25){height:90px;animation-delay:1.25s} .tower:nth-child(26){height:40px;animation-delay:1.3s}
+    .tower:nth-child(27){height:70px;animation-delay:1.35s} .tower:nth-child(28){height:115px;animation-delay:1.4s}
+    .tower:nth-child(29){height:50px;animation-delay:1.45s} .tower:nth-child(30){height:75px;animation-delay:1.5s}
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="tab-bar">
+    <span class="tab active">📖 README.md</span>
+    <span class="tab">📁 Code</span>
+    <span class="tab">⚙️ Settings</span>
+  </div>
+  <div class="content markdown-body">
+
+    <!-- ═══ SECTION 1: MARAUDER'S MAP HEADER ═══ -->
+    <div align="center">
+      <img src="./assets/marauders-map-header.svg" width="100%" alt="⚡ Wizarding Developer — Marauder's Map Header"/>
+    </div>
+
+    <!-- ═══ SECTION 2: TYPING ANIMATION ═══ -->
+    <div align="center" style="margin:20px 0">
+      <a href="https://git.io/typing-svg">
+        <img src="https://readme-typing-svg.demolab.com?font=Cinzel&weight=700&size=28&duration=3000&pause=1500&color=EEBA30&center=true&vCenter=true&width=700&height=45&lines=%E2%9C%A8+Lumos+Maxima!+Revealing+the+Code...;%F0%9F%AA%84+Expecto+Patronum!+Summoning+Projects...;%F0%9F%94%AE+Accio+Collaboration!;%E2%9A%A1+Mischief+Managed." alt="Typing SVG"/>
+      </a>
+    </div>
+
+    <!-- ═══ SECTION 3: HOUSE IDENTITY BADGES ═══ -->
+    <div class="badge-row">
+      <img src="https://img.shields.io/badge/🦁_House-Gryffindor-740001?style=for-the-badge&labelColor=3B0000" alt="House Gryffindor"/>
+      <img src="https://img.shields.io/badge/🪄_Wand-Elder_•_Dragon_Heartstring-4A0000?style=for-the-badge&labelColor=1A0000" alt="Wand"/>
+      <img src="https://img.shields.io/badge/🔥_Patronus-Phoenix-D3A625?style=for-the-badge&labelColor=740001" alt="Patronus"/>
+      <img src="https://img.shields.io/badge/🏟️_Quidditch-Seeker-2A623D?style=for-the-badge&labelColor=0D2615" alt="Quidditch"/>
+    </div>
+    <div align="center" class="visitor-badge">
+      <img src="https://komarev.com/ghpvc/?username=lucifer0612&style=for-the-badge&color=740001&label=MARAUDER'S+MAP+VISITORS" alt="Profile Visitors"/>
+    </div>
+
+    <!-- ═══ HOGWARTS EXPRESS PROGRESS BAR ═══ -->
+    <div align="center" style="margin:24px 0">
+      <img src="./assets/hogwarts-express.svg" alt="🚂 Hogwarts Express — Coding Journey" width="100%" style="max-width:800px"/>
+    </div>
+
+    <!-- ═══ SNITCH DIVIDER ═══ -->
+    <div class="snitch-divider">
+      <img src="./assets/golden-snitch-divider.svg" alt="✦"/>
+    </div>
+
+    <!-- ═══ SECTION 4: ABOUT ME ═══ -->
+    <div class="about-section">
+      <div class="about-text">
+        <h2>🏰 The Sorting Hat's Verdict</h2>
+        <blockquote>"Plenty of courage, I see. Not a bad mind either. There's talent, oh my goodness, yes — and a nice thirst to prove yourself... Better be — <strong>GRYFFINDOR!</strong>"</blockquote>
+        <p style="margin:16px 0;line-height:1.7">I'm <strong>Ashutosh Kesarwani</strong>, a <strong>Wizard-in-Training</strong> at <strong>IIIT Allahabad</strong>, currently mastering the dark arts of <strong>Web Development</strong> and <strong>Open Source</strong>. With <strong>51 repositories</strong> and active contributions to <strong>OpenCode IIITA</strong>, I'm forging digital artifacts at the intersection of elegant code and boundless curiosity.</p>
+        <ul>
+          <li>🔮 <strong>Current Quest</strong> — Learning Full-Stack Web Development & contributing to Open Source</li>
+          <li>📜 <strong>Mastered O.W.L.s</strong> — C, C++, Java, Python, JavaScript, TypeScript, HTML5, CSS3</li>
+          <li>🦉 <strong>Open Source</strong> — Active contributor to <strong>OpenCode IIITA</strong> (Cyber_lens, CodeCraft, DING, Subsentry & more)</li>
+          <li>🏆 <strong>Achievements</strong> — Pull Shark x2 • GitHub Pro • 6⭐ on MicroMaker</li>
+          <li>⚡ <strong>Life Motto</strong> — <em>"It is our choices that show what we truly are, far more than our abilities."</em></li>
+        </ul>
+      </div>
+      <div class="about-img">
+        <img src="./assets/patronus-phoenix.svg" alt="Glowing Phoenix Patronus" style="background:#0d1117;border-radius:12px;padding:8px"/>
+      </div>
+    </div>
+
+    <!-- ═══ SNITCH DIVIDER ═══ -->
+    <div class="snitch-divider">
+      <img src="./assets/golden-snitch-divider.svg" alt="✦"/>
+    </div>
+
+    <!-- ═══ SECTION 5: TECH STACK ═══ -->
+    <div align="center">
+      <h2>🪄 Wand & Spellbook</h2>
+      <p class="muted"><em>The wand chooses the wizard, Mr. Potter. The tech stack chooses the developer.</em></p>
+
+      <!-- Animated wand shooting spell particles -->
+      <div style="margin:16px 0">
+        <img src="./assets/wand-casting-spell.svg" alt="✨ Wand Casting Spell" width="100%" style="max-width:800px"/>
+      </div>
+
+      <h3>✦ Charms — Core Languages</h3>
+      <div class="icons-row">
+        <img src="https://skillicons.dev/icons?i=c,cpp,java,python,js,ts,html,css&theme=dark" alt="Languages"/>
+      </div>
+
+      <h3>✦ Transfiguration — Frameworks & Tools</h3>
+      <div class="icons-row">
+        <img src="https://skillicons.dev/icons?i=react,nextjs,flutter,spring,figma,git&theme=dark" alt="Frameworks"/>
+      </div>
+
+      <h3>✦ Artifacts — Tools & Data</h3>
+      <div class="icons-row" style="margin-bottom: 24px;">
+        <img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black" alt="Matplotlib"/>
+        &nbsp;
+        <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/>
+        &nbsp;
+        <img src="https://img.shields.io/badge/Premiere_Pro-9999FF.svg?style=for-the-badge&logo=Adobe%20Premiere%20Pro&logoColor=white" alt="Premiere Pro"/>
+      </div>
+      
+      <div style="margin-top: 16px;">
+        <img src="./assets/potion-bottles.svg" width="100%" style="max-width:800px" alt="N.E.W.T. Level Potions — Skill Mastery"/>
+      </div>
+    </div>
+
+    <!-- ═══ SNITCH DIVIDER ═══ -->
+    <div class="snitch-divider">
+      <img src="./assets/golden-snitch-divider.svg" alt="✦"/>
+    </div>
+
+    <!-- ═══ SECTION 6: FEATURED PROJECTS ═══ -->
+    <div align="center">
+      <h2>⚡ Magical Artifacts — Featured Projects</h2>
+    </div>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>🚀 MicroMaker</h3>
+        <a href="https://github.com/Lucifer-0612/MicroMaker">
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=Lucifer-0612&repo=MicroMaker&bg_color=0d1117&title_color=EEBA30&icon_color=EEBA30&text_color=E5E7EB&border_color=740001" alt="MicroMaker Repo"/>
+        </a>
+        <div class="badges">
+          <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
+          <img src="https://img.shields.io/badge/MIT-green?style=flat-square" alt="MIT"/>
+        </div>
+        <p><em>Micromaker Website — 6⭐ and growing. "I solemnly swear that I am building something great."</em></p>
+      </div>
+      
+      <div class="project-card">
+        <h3>📝 HackLog</h3>
+        <a href="https://github.com/Lucifer-0612/HackLog-Log-your-Hackathon-Journey">
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=Lucifer-0612&repo=HackLog-Log-your-Hackathon-Journey&bg_color=0d1117&title_color=EEBA30&icon_color=EEBA30&text_color=E5E7EB&border_color=740001" alt="HackLog Repo"/>
+        </a>
+        <div class="badges">
+          <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
+        </div>
+        <p><em>Log your Hackathon journey — analyze performance & mistakes for upcoming events.</em></p>
+      </div>
+
+      <div class="project-card">
+        <h3>💻 LeetCode Solutions</h3>
+        <a href="https://github.com/Lucifer-0612/leetcode_solutions">
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=Lucifer-0612&repo=leetcode_solutions&bg_color=0d1117&title_color=EEBA30&icon_color=EEBA30&text_color=E5E7EB&border_color=740001" alt="LeetCode Solutions Repo"/>
+        </a>
+        <div class="badges">
+          <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++"/>
+        </div>
+        <p><em>Competitive programming spellbook — daily practice makes the wizard.</em></p>
+      </div>
+
+      <div class="project-card">
+        <h3>🔍 Cyber Lens</h3>
+        <a href="https://github.com/Lucifer-0612/Cyber_lens">
+          <img src="https://github-readme-stats.vercel.app/api/pin/?username=Lucifer-0612&repo=Cyber_lens&bg_color=0d1117&title_color=EEBA30&icon_color=EEBA30&text_color=E5E7EB&border_color=740001" alt="Cyber Lens Repo"/>
+        </a>
+        <div class="badges">
+          <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
+          <img src="https://img.shields.io/badge/MIT-green?style=flat-square" alt="MIT"/>
+        </div>
+        <p><em>Threat-intelligence aggregator — checks IPs, domains & hashes. (OpenCode IIITA)</em></p>
+      </div>
+    </div>
+
+    <!-- ═══ SNITCH DIVIDER ═══ -->
+    <div class="snitch-divider">
+      <img src="./assets/golden-snitch-divider.svg" alt="✦"/>
+    </div>
+
+    <!-- ═══ SECTION 7: STATS ═══ -->
+    <div align="center">
+      <!-- Floating Candles — Great Hall atmosphere -->
+      <div style="margin-bottom:-20px">
+        <img src="./assets/floating-candles.svg" alt="🕯️ Floating Candles" width="100%" style="max-width:800px"/>
+      </div>
+      <h2>🗺️ Marauder's Telemetry</h2>
+      <div class="stats-row">
+        <img src="https://github-readme-stats.vercel.app/api?username=lucifer0612&show_icons=true&title_color=EEBA30&icon_color=EEBA30&text_color=E5E7EB&bg_color=0d1117&border_color=740001&ring_color=EEBA30&hide_border=false&include_all_commits=true&count_private=true" alt="GitHub Stats"/>
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucifer0612&layout=compact&title_color=EEBA30&text_color=E5E7EB&bg_color=0d1117&border_color=740001&langs_count=8" alt="Top Languages"/>
+      </div>
+      <div class="stats-row">
+        <img src="https://github-readme-streak-stats.herokuapp.com/?user=lucifer0612&background=0d1117&border=740001&stroke=740001&ring=EEBA30&fire=EEBA30&currStreakNum=EEBA30&sideNums=E5E7EB&currStreakLabel=EEBA30&sideLabels=EEBA30&dates=8b949e" alt="GitHub Streak"/>
+      </div>
+      <div class="stats-row">
+        <img src="https://github-profile-trophy.vercel.app/?username=lucifer0612&theme=darkhub&no-bg=true&no-frame=true&column=7&margin-w=10" alt="Trophies"/>
+      </div>
+      <div class="stats-row">
+        <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical&bg_color=0d1117&text_color=EEBA30&border_color=740001" alt="Random Dev Quote"/>
+      </div>
+    </div>
+
+    <!-- ═══ SNITCH DIVIDER ═══ -->
+    <div class="snitch-divider">
+      <img src="./assets/golden-snitch-divider.svg" alt="✦"/>
+    </div>
+
+    <!-- ═══ RESTRICTED SECTION ═══ -->
+    <div align="center">
+      <h2>🔒 The Restricted Section</h2>
+      <details style="text-align:left; max-width:600px; margin:0 auto; background:#161b22; padding:16px; border-radius:8px; border:1px solid #30363d;">
+        <summary style="cursor:pointer; font-size:16px;"><b>🗝️ Cast <code>Alohomora</code> to unlock secret research...</b></summary>
+        
+        <br/>
+        
+        <h3 style="color:#E5E7EB;">📜 Experimental Spells in Development</h3>
+        
+        <div align="center" style="margin: 20px 0;">
+          <img src="./assets/dragon-egg.svg" width="400" alt="Warning: Dragon Egg"/>
+        </div>
+        
+        <table style="width:100%; border-collapse:collapse; margin-top:16px; font-size:14px; color:#c9d1d9;">
+          <tr>
+            <th style="border-bottom:1px solid #30363d; padding:8px; text-align:left;">Spell</th>
+            <th style="border-bottom:1px solid #30363d; padding:8px; text-align:left;">Description</th>
+            <th style="border-bottom:1px solid #30363d; padding:8px; text-align:center;">Status</th>
+          </tr>
+          <tr>
+            <td style="border-bottom:1px solid #30363d; padding:8px;">🧬 <b>Polyjuice Neural Transfer</b></td>
+            <td style="border-bottom:1px solid #30363d; padding:8px;">PyTorch image style-transfer model</td>
+            <td style="border-bottom:1px solid #30363d; padding:8px; text-align:center;">🔬</td>
+          </tr>
+          <tr>
+            <td style="border-bottom:1px solid #30363d; padding:8px;">📡 <b>Owl Post P2P</b></td>
+            <td style="border-bottom:1px solid #30363d; padding:8px;">Decentralized WebRTC messaging</td>
+            <td style="border-bottom:1px solid #30363d; padding:8px; text-align:center;">🏗️</td>
+          </tr>
+        </table>
+        
+        <br/>
+        <p style="font-style:italic; color:#8b949e; text-align:center;">
+          "You will find that I will only truly have left this school when none here are loyal to me." — Dumbledore
+        </p>
+      </details>
+    </div>
+
+    <!-- ═══ SNITCH DIVIDER ═══ -->
+    <div class="snitch-divider">
+      <img src="./assets/golden-snitch-divider.svg" alt="✦"/>
+    </div>
+
+    <!-- ═══ SECTION 8: ACTIVITY GRAPH ═══ -->
+    <div align="center">
+      <h2>📊 The Room of Requirement</h2>
+      <img class="activity-graph" src="https://github-readme-activity-graph.vercel.app/graph?username=lucifer0612&bg_color=0d1117&color=EEBA30&line=740001&point=EEBA30&area_color=740001&area=true&hide_border=true&custom_title=Spellcasting%20Frequency" alt="Activity Graph" width="100%"/>
+      <br/><br/>
+      <img src="https://holopin.me/lucifer0612" alt="An image of @lucifer0612's Holopin badges" width="100%" style="max-width:800px; border-radius:8px;"/>
+    </div>
+
+    <!-- ═══ SNITCH DIVIDER ═══ -->
+    <div class="snitch-divider">
+      <img src="./assets/golden-snitch-divider.svg" alt="✦"/>
+    </div>
+
+    <!-- ═══ SECTION 10b: 3D CONTRIBUTION CALENDAR ═══ -->
+    <div align="center">
+      <h2>🏰 The Hogwarts Skyline</h2>
+      <p class="muted"><em>"Every commit builds a tower, every PR opens a gate."</em></p>
+      <br/>
+
+      <!-- 3D Calendar Visualization Preview -->
+      <div class="calendar-3d-placeholder">
+        <div class="skyline">
+          <div class="tower"></div><div class="tower"></div><div class="tower"></div>
+          <div class="tower"></div><div class="tower"></div><div class="tower"></div>
+          <div class="tower"></div><div class="tower"></div><div class="tower"></div>
+          <div class="tower"></div><div class="tower"></div><div class="tower"></div>
+          <div class="tower"></div><div class="tower"></div><div class="tower"></div>
+          <div class="tower"></div><div class="tower"></div><div class="tower"></div>
+          <div class="tower"></div><div class="tower"></div><div class="tower"></div>
+          <div class="tower"></div><div class="tower"></div><div class="tower"></div>
+          <div class="tower"></div><div class="tower"></div><div class="tower"></div>
+          <div class="tower"></div><div class="tower"></div><div class="tower"></div>
+        </div>
+        <p style="color:#EEBA30;font-size:12px;margin-top:16px;opacity:0.7">
+          ▲ 3D Contribution Calendar — Generated by GitHub Action<br/>
+          <span style="color:#8b949e">Run <code>.github/workflows/profile-3d.yml</code> to generate</span>
+        </p>
+      </div>
+
+      <br/>
+      <blockquote>Set up the <a href="https://github.com/yoshi389111/github-profile-3d-contrib" style="color:#EEBA30">yoshi389111/github-profile-3d-contrib</a> GitHub Action to auto-generate this 3D calendar.</blockquote>
+    </div>
+
+    <!-- ═══ SNITCH DIVIDER ═══ -->
+    <div class="snitch-divider">
+      <img src="./assets/golden-snitch-divider.svg" alt="✦"/>
+    </div>
+
+    <!-- ═══ SECTION 9: RESTRICTED SECTION ═══ -->
+    <div align="center">
+      <h2>🔒 The Restricted Section</h2>
+    </div>
+    <details open>
+      <summary>🗝️ Cast <code>Alohomora</code> to unlock secret research...</summary>
+      <br/>
+      <h3>📜 Experimental Spells in Development</h3>
+      <table>
+        <tr><th style="color:#EEBA30">Spell</th><th style="color:#EEBA30">Description</th><th style="color:#EEBA30">Status</th></tr>
+        <tr><td>🧬 Polyjuice Neural Transfer</td><td>PyTorch image style-transfer model</td><td align="center">🔬 Research</td></tr>
+        <tr><td>📡 Owl Post P2P</td><td>Decentralized encrypted messaging</td><td align="center">🏗️ Building</td></tr>
+        <tr><td>🌌 Pensieve RAG</td><td>Personal knowledge base with retrieval-augmented memory</td><td align="center">✅ Alpha</td></tr>
+        <tr><td>🎯 Nimbus 2000 Runtime</td><td>WASM-powered edge computing framework</td><td align="center">💡 Concept</td></tr>
+      </table>
+      <h3>🎓 N.E.W.T. Certifications</h3>
+      <ul>
+        <li>☁️ AWS Solutions Architect — Professional</li>
+        <li>🐳 Certified Kubernetes Administrator (CKA)</li>
+        <li>🔐 CompTIA Security+</li>
+      </ul>
+      <blockquote>"You will find that I will only truly have left this school when none here are loyal to me." — Dumbledore</blockquote>
+    </details>
+
+    <!-- ═══ SNITCH DIVIDER ═══ -->
+    <div class="snitch-divider">
+      <img src="./assets/golden-snitch-divider.svg" alt="✦"/>
+    </div>
+
+    <!-- ═══ SECTION 11: CONTACT ═══ -->
+    <div align="center">
+      <h2>🦉 Send an Owl</h2>
+      <p class="muted"><em>Got a project idea? Want to discuss wizardry & code? My owlery is always open.</em></p>
+      <br/>
+      <div class="social-row">
+        <img src="https://img.shields.io/badge/Instagram-Owl_Post-%23E4405F?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram"/>
+        <img src="https://img.shields.io/badge/LinkedIn-Daily_Prophet-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+        <img src="https://img.shields.io/badge/𝕏-Howler-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"/>
+      </div>
+      <br/>
+    </div>
+
+    <br/>
+
+    <!-- ═══ SECTION 12: QUILL SIGNATURE FOOTER ═══ -->
+    <div align="center">
+      <img src="./assets/quill-signature-footer.svg" width="100%" alt="Mischief Managed — Quill Signature Footer"/>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

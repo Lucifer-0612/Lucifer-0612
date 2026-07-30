@@ -1,0 +1,259 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="900" height="200">
+  <defs>
+    <style>
+      /* ═══ Quill Signature Footer — Self-Drawing Animation ═══ */
+
+      /* Signature path — self-drawing */
+      .signature-path {
+        fill: none;
+        stroke: #EEBA30;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 600;
+        stroke-dashoffset: 600;
+        animation: drawSignature 3s ease-in-out 0.5s forwards;
+      }
+      @keyframes drawSignature {
+        0% { stroke-dashoffset: 600; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      /* "Mischief Managed" text — draws itself */
+      .mischief-stroke {
+        fill: none;
+        stroke: #C69214;
+        stroke-width: 1;
+        stroke-dasharray: 500;
+        stroke-dashoffset: 500;
+        animation: drawMischief 2.5s ease-in-out 3s forwards;
+      }
+      .mischief-fill {
+        opacity: 0;
+        animation: fadeIn 1.5s ease-in 4.5s forwards;
+      }
+      @keyframes drawMischief {
+        0% { stroke-dashoffset: 500; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
+      /* Quill feather */
+      .quill {
+        opacity: 0;
+        animation: quillAppear 1s ease-out 0.2s forwards;
+        transform-origin: 620px 120px;
+      }
+      @keyframes quillAppear {
+        0% { opacity: 0; transform: translateY(10px) rotate(-5deg); }
+        100% { opacity: 1; transform: translateY(0) rotate(0deg); }
+      }
+
+      /* Quill writing motion */
+      .quill-writing {
+        animation: quillWrite 3s ease-in-out 0.5s forwards;
+        transform-origin: 620px 120px;
+      }
+      @keyframes quillWrite {
+        0% { transform: translate(0, 0) rotate(0deg); }
+        15% { transform: translate(20px, -3px) rotate(2deg); }
+        30% { transform: translate(50px, 2px) rotate(-1deg); }
+        50% { transform: translate(80px, -2px) rotate(1deg); }
+        70% { transform: translate(40px, 3px) rotate(-2deg); }
+        85% { transform: translate(60px, 0) rotate(1deg); }
+        100% { transform: translate(0, 0) rotate(0deg); }
+      }
+
+      /* Ink drops */
+      .ink-drop {
+        opacity: 0;
+        animation: dropFall 0.6s ease-in forwards;
+      }
+      .drop1 { animation-delay: 1.5s; }
+      .drop2 { animation-delay: 2.2s; }
+      .drop3 { animation-delay: 3.8s; }
+      @keyframes dropFall {
+        0% { opacity: 0; transform: scale(0); }
+        50% { opacity: 0.4; transform: scale(1.2); }
+        100% { opacity: 0.2; transform: scale(1); }
+      }
+
+      /* Wax seal */
+      .wax-seal {
+        opacity: 0;
+        animation: sealStamp 0.5s ease-out 5s forwards;
+        transform-origin: 780px 130px;
+      }
+      @keyframes sealStamp {
+        0% { opacity: 0; transform: scale(2) rotate(-10deg); }
+        60% { opacity: 1; transform: scale(0.9) rotate(2deg); }
+        100% { opacity: 1; transform: scale(1) rotate(0deg); }
+      }
+
+      /* Decorative underline */
+      .sig-underline {
+        stroke-dasharray: 200;
+        stroke-dashoffset: 200;
+        animation: drawUnderline 1s ease-in-out 3.5s forwards;
+      }
+      @keyframes drawUnderline {
+        0% { stroke-dashoffset: 200; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      /* Background */
+      .footer-bg {
+        fill: #0d1117;
+      }
+
+      /* Subtle border */
+      .top-border {
+        stroke-dasharray: 900;
+        stroke-dashoffset: 900;
+        animation: drawBorderTop 2s ease-in-out 0s forwards;
+      }
+      @keyframes drawBorderTop {
+        0% { stroke-dashoffset: 900; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      /* Stars */
+      .star { opacity: 0; animation: starTwinkle 3s ease-in-out infinite; }
+      .s1 { animation-delay: 0.5s; } .s2 { animation-delay: 1.2s; }
+      .s3 { animation-delay: 2s; } .s4 { animation-delay: 0.8s; }
+      .s5 { animation-delay: 1.5s; } .s6 { animation-delay: 2.5s; }
+      @keyframes starTwinkle {
+        0%, 100% { opacity: 0; } 50% { opacity: 0.6; }
+      }
+
+      /* "The Marauders" attribution */
+      .attribution {
+        opacity: 0;
+        animation: fadeIn 2s ease-in 5.5s forwards;
+      }
+    </style>
+
+    <!-- Wax seal gradient -->
+    <radialGradient id="waxGrad" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#9B1B1B"/>
+      <stop offset="50%" stop-color="#740001"/>
+      <stop offset="100%" stop-color="#4A0000"/>
+    </radialGradient>
+
+    <!-- Seal inner gradient -->
+    <radialGradient id="sealInner" cx="50%" cy="45%" r="45%">
+      <stop offset="0%" stop-color="#EEBA30" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#C69214" stop-opacity="0.4"/>
+    </radialGradient>
+
+    <!-- Quill gradient -->
+    <linearGradient id="quillGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5E7EB"/>
+      <stop offset="30%" stop-color="#D1D5DB"/>
+      <stop offset="60%" stop-color="#9CA3AF"/>
+      <stop offset="100%" stop-color="#6B7280"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect class="footer-bg" x="0" y="0" width="900" height="200"/>
+
+  <!-- Top decorative border -->
+  <line class="top-border" x1="50" y1="15" x2="850" y2="15" stroke="#740001" stroke-width="0.8" opacity="0.5"/>
+  <line class="top-border" x1="100" y1="19" x2="800" y2="19" stroke="#EEBA30" stroke-width="0.3" opacity="0.3"/>
+
+  <!-- Stars -->
+  <circle class="star s1" cx="80" cy="40" r="1" fill="#EEBA30"/>
+  <circle class="star s2" cx="200" cy="55" r="1.2" fill="#FCE074"/>
+  <circle class="star s3" cx="350" cy="35" r="0.8" fill="#EEBA30"/>
+  <circle class="star s4" cx="550" cy="45" r="1" fill="#FCE074"/>
+  <circle class="star s5" cx="720" cy="30" r="1.2" fill="#EEBA30"/>
+  <circle class="star s6" cx="850" cy="50" r="0.8" fill="#FCE074"/>
+
+  <!-- ═══ Quill Feather ═══ -->
+  <g class="quill">
+    <g class="quill-writing">
+      <!-- Feather body -->
+      <path d="M280,140 Q310,100 340,70 Q360,50 380,35 Q400,22 420,20 Q430,19 425,25 Q415,35 400,50 Q380,70 360,85 Q340,100 320,115 Q305,125 295,135" 
+            fill="url(#quillGrad)" stroke="#9CA3AF" stroke-width="0.5" opacity="0.85"/>
+      <!-- Feather shaft -->
+      <line x1="285" y1="137" x2="420" y2="21" stroke="#6B7280" stroke-width="1.2"/>
+      <!-- Feather barbs -->
+      <path d="M340,70 Q330,60 335,50" fill="none" stroke="#D1D5DB" stroke-width="0.3" opacity="0.5"/>
+      <path d="M360,50 Q350,42 355,32" fill="none" stroke="#D1D5DB" stroke-width="0.3" opacity="0.5"/>
+      <path d="M380,35 Q370,28 375,20" fill="none" stroke="#D1D5DB" stroke-width="0.3" opacity="0.5"/>
+      <path d="M350,78 Q360,65 358,55" fill="none" stroke="#D1D5DB" stroke-width="0.3" opacity="0.4"/>
+      <path d="M370,58 Q378,48 376,38" fill="none" stroke="#D1D5DB" stroke-width="0.3" opacity="0.4"/>
+      <!-- Nib -->
+      <path d="M282,140 L280,148 L287,143 Z" fill="#4B5563" stroke="#374151" stroke-width="0.3"/>
+      <!-- Ink at nib -->
+      <circle cx="282" cy="146" r="2" fill="#1A0000" opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- ═══ Signature Path ═══ -->
+  <path class="signature-path" d="M310,140 
+    C320,120 340,115 355,125 
+    C365,132 360,145 350,148 
+    C340,150 335,140 340,132 
+    C345,124 360,118 375,122 
+    C390,126 395,140 390,148 
+    L395,135 C400,125 410,120 420,128 
+    C425,132 422,142 415,145 
+    L430,130 C435,122 445,118 455,125 
+    C465,132 460,148 450,152 
+    C440,155 435,145 440,138 
+    C445,130 460,125 475,130 
+    L480,132 L490,128 
+    C500,122 510,130 505,138 
+    C502,142 495,145 490,142 
+    L510,135 C520,128 535,132 530,142 
+    C525,150 515,155 508,148"/>
+
+  <!-- Signature underline flourish -->
+  <path class="sig-underline" d="M310,155 Q400,165 520,155" fill="none" stroke="#EEBA30" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Ink drops -->
+  <circle class="ink-drop drop1" cx="365" cy="150" r="2" fill="#1A0000" opacity="0.3"/>
+  <circle class="ink-drop drop1" cx="368" cy="152" r="1" fill="#1A0000" opacity="0.2"/>
+  <circle class="ink-drop drop2" cx="440" cy="148" r="1.5" fill="#1A0000" opacity="0.25"/>
+  <circle class="ink-drop drop3" cx="510" cy="150" r="1.8" fill="#1A0000" opacity="0.2"/>
+
+  <!-- ═══ "Mischief Managed" Text ═══ -->
+  <text class="mischief-stroke" x="450" y="185" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" letter-spacing="4">
+    Mischief Managed.
+  </text>
+  <text class="mischief-fill" x="450" y="185" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" letter-spacing="4" fill="#C69214" opacity="0.7">
+    Mischief Managed.
+  </text>
+
+  <!-- Attribution -->
+  <text class="attribution" x="450" y="198" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="9" letter-spacing="3" fill="#8b949e" opacity="0.35">
+    — The Marauders
+  </text>
+
+  <!-- ═══ Wax Seal ═══ -->
+  <g class="wax-seal">
+    <!-- Seal outer (irregular wax shape) -->
+    <path d="M780,130 
+      Q788,118 798,122 Q808,118 812,128 
+      Q818,122 818,132 Q824,138 818,142 
+      Q822,150 814,152 Q816,160 808,158 
+      Q806,166 798,162 Q792,168 786,160 
+      Q778,164 778,156 Q770,154 774,146 
+      Q768,140 774,134 Q770,128 778,128 Z" 
+      fill="url(#waxGrad)" stroke="#4A0000" stroke-width="0.5"/>
+
+    <!-- Seal inner circle -->
+    <circle cx="796" cy="140" r="14" fill="none" stroke="#EEBA30" stroke-width="0.8" opacity="0.5"/>
+
+    <!-- Gryffindor "G" crest -->
+    <text x="796" y="146" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="url(#sealInner)">G</text>
+
+    <!-- Seal highlight -->
+    <ellipse cx="790" cy="133" rx="5" ry="3" fill="#9B1B1B" opacity="0.3"/>
+  </g>
+</svg>
