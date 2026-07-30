@@ -58,9 +58,9 @@
 I'm **Ashutosh Kesarwani**, a **Wizard-in-Training** at **IIIT Allahabad**, currently mastering the dark arts of **Web Development** and **Open Source**. With **51 repositories** and active contributions to **OpenCode IIITA**, I'm forging digital artifacts at the intersection of elegant code and boundless curiosity.
 
 - 🔮 **Current Quest** — Learning Full-Stack Web Development & contributing to Open Source
-- 📜 **Mastered O.W.L.s** — C, C++, Java, Python, JavaScript, TypeScript, HTML5, CSS3
+- 📜 **Mastered O.W.L.s** — C, C++, Java, Python, JavaScript, TypeScript, HTML5, CSS3, MySQL
 - 🦉 **Open Source** — Active contributor to **OpenCode IIITA** (Cyber_lens, CodeCraft, DING, Subsentry & more)
-- 🏆 **Achievements** — Pull Shark x2 • GitHub Pro • 6⭐ on MicroMaker
+- 🏆 **Achievements** — Pull Shark x2 • YOLO • Quickdraw • GitHub Pro • 6⭐ on MicroMaker
 - ⚡ **Life Motto** — *"It is our choices that show what we truly are, far more than our abilities."*
 
 <br clear="right"/>
@@ -94,7 +94,7 @@ I'm **Ashutosh Kesarwani**, a **Wizard-in-Training** at **IIIT Allahabad**, curr
 
 ### ✦ Charms — Core Languages
 
-<img src="https://skillicons.dev/icons?i=c,cpp,java,python,js,ts,html,css&theme=dark" alt="Languages"/>
+<img src="https://skillicons.dev/icons?i=c,cpp,java,python,js,ts,html,css,mysql&theme=dark" alt="Languages"/>
 
 <br/><br/>
 
