@@ -212,13 +212,6 @@ I'm **Ashutosh Kesarwani**, a **Wizard-in-Training** at **IIIT Allahabad**, curr
 
 
 
-<!-- Streak Stats with Gryffindor Colors -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=lucifer0612&background=0d1117&border=740001&stroke=740001&ring=EEBA30&fire=EEBA30&currStreakNum=EEBA30&sideNums=E5E7EB&currStreakLabel=EEBA30&sideLabels=EEBA30&dates=8b949e"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=lucifer0612&background=FFFFFF&border=EEBA30&stroke=EEBA30&ring=740001&fire=740001&currStreakNum=740001&sideNums=1A0000&currStreakLabel=740001&sideLabels=740001&dates=8b949e" alt="GitHub Streak"/>
-</picture>
-
-
 
 ### 🏆 Gringotts Vault Achievements
 
@@ -254,13 +247,7 @@ I'm **Ashutosh Kesarwani**, a **Wizard-in-Training** at **IIIT Allahabad**, curr
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Lucifer-0612/Lucifer-0612/output/github-snake.svg"/>
   <img src="https://raw.githubusercontent.com/Lucifer-0612/Lucifer-0612/output/github-snake.svg" alt="Snake eating contributions" width="100%"/>
 </picture>
-
-<br/>
-
-> *Set up the [Platane/snk](https://github.com/Platane/snk) GitHub Action in your profile repo to auto-generate this animation.*
-
 </div>
-
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/golden-snitch-divider.svg"/>
@@ -276,37 +263,39 @@ I'm **Ashutosh Kesarwani**, a **Wizard-in-Training** at **IIIT Allahabad**, curr
 
 ## 🔒 The Restricted Section
 
-</div>
+<br/>
 
 <details>
-  <summary><b>🗝️ Cast <code>Alohomora</code> to unlock secret research...</b></summary>
+  <summary>🗝️ <i>Cast <code>Alohomora</code> to unlock secret research...</i></summary>
 
   <br/>
 
   ### 📜 Experimental Spells in Development
 
-  <div align="center">
-    <img src="./assets/dragon-egg.svg" width="400" alt="Warning: Dragon Egg"/>
-  </div>
-  
+  <img src="./assets/dragon-egg.svg" width="400" alt="Warning: Dragon Egg"/>
+
   | Spell | Description | Status |
   | :--- | :--- | :---: |
   | 🧬 **Polyjuice Neural Transfer** | PyTorch image style-transfer model for real-time visual morphing | 🔬 Research |
   | 📡 **Owl Post P2P** | Decentralized encrypted messaging on WebRTC & libp2p | 🏗️ Building |
   | 🌌 **Pensieve RAG** | Personal knowledge base with retrieval-augmented memory | ✅ Alpha |
   | 🎯 **Nimbus 2000 Runtime** | WASM-powered edge computing framework for low-latency spells | 💡 Concept |
-  
+
   ### 🎓 N.E.W.T. Certifications
-  
+
   - ☁️ AWS Solutions Architect — Professional
   - 🐳 Certified Kubernetes Administrator (CKA)
   - 🔐 CompTIA Security+
-  
+
   <br/>
 
   > *"You will find that I will only truly have left this school when none here are loyal to me." — Dumbledore*
 
 </details>
+
+</div>
+
+
 
 <div align="center">
   <picture>
@@ -382,8 +371,6 @@ I'm **Ashutosh Kesarwani**, a **Wizard-in-Training** at **IIIT Allahabad**, curr
 </picture>
 
 <br/>
-
-> *Set up the [yoshi389111/github-profile-3d-contrib](https://github.com/yoshi389111/github-profile-3d-contrib) GitHub Action to auto-generate this 3D calendar.*
 
 </div>
 
