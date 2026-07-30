@@ -250,9 +250,9 @@ I'm **Ashutosh Kesarwani**, a **Wizard-in-Training** at **IIIT Allahabad**, curr
 <br/>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lucifer0612/lucifer0612/output/github-snake-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lucifer0612/lucifer0612/output/github-snake.svg"/>
-  <img src="https://raw.githubusercontent.com/lucifer0612/lucifer0612/output/github-snake.svg" alt="Snake eating contributions" width="100%"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Lucifer-0612/Lucifer-0612/output/github-snake-dark.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Lucifer-0612/Lucifer-0612/output/github-snake.svg"/>
+  <img src="https://raw.githubusercontent.com/Lucifer-0612/Lucifer-0612/output/github-snake.svg" alt="Snake eating contributions" width="100%"/>
 </picture>
 
 <br/>
