@@ -247,13 +247,16 @@ I'm **Ashutosh Kesarwani**, a **Wizard-in-Training** at **IIIT Allahabad**, curr
 <!-- Random Dev Quote -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical&bg_color=0d1117&text_color=EEBA30&border_color=740001"/>
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical&bg_color=FFFFFF&text_color=1A0000&border_color=EEBA30" alt="Random Dev Quote"/>
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical&bg_color=FFFFFF&text_color=1A0000&border_color=EEBA30" alt="Random Quote"/>
 </picture>
 
-<br/><br/>
+### 🏆 Gringotts Vault Achievements
 
-<!-- GitHub Trophies -->
-<img src="https://github-profile-trophy.vercel.app/?username=lucifer0612&theme=darkhub&no-bg=true&no-frame=true&column=7&margin-w=10" alt="GitHub Trophies"/>
+<div align="center">
+  <img src="./assets/gringotts-vault.svg" width="100%" alt="Gringotts Vault Achievements" />
+</div>
+
+<br/>
 
 </div>
 
